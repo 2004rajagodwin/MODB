@@ -1,0 +1,50 @@
+@media screen and (min-width:1920px) {
+    
+}
+@media screen and (min-width:1600px) {
+
+}
+@media screen and (max-width:1199px) and (min-width:992px) {
+
+}
+@media screen and (max-width:991px) and (min-width:768px){
+
+}
+@media screen and (max-width:767px){
+
+
+.modp-testi-section {
+        text-align: center;
+    }
+
+    .modp-testi-section .swiper-button-next,
+    .modp-testi-section .swiper-button-prev {
+        display: none;
+    }
+
+    .brand-marquee-lo {
+        gap: 50px;
+    }
+
+    .brand-logo {
+        max-height: 60px;
+        max-width: 120px;
+    }
+
+    .brand-logo-wrapper {
+        height: 70px;
+    }
+
+
+    /* new */
+
+ 
+
+}
+
+@media screen and (max-width:480px) {
+
+}
+
+
+

@@ -1,0 +1,639 @@
+<?php
+include 'admin/AppCode/School.php';
+?>
+<!-- /.preloader -->
+<link rel="stylesheet" href="assets/vendors/aivons-icons/style.css">
+<!-- Font Awesome (fix for missing social icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-bxJmT3pKb9QDwFYX6I+5HqZ1GQvQG5m1b/ixg/hQ4s1yEzPEHfSWsLldxCEkqvhKkVQ5+zKfqgZf5FfZ+3gE0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    /* Desktop Search Styles */
+    .search-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .search-input {
+        width: 0;
+        padding: 0;
+        border: none;
+        background: transparent;
+        color: #fff;
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .search-input.active {
+        width: 200px;
+        padding: 8px 15px;
+        opacity: 1;
+        visibility: visible;
+        background: rgba(255,255,255,0.1);
+        border-radius: 4px;
+        margin-left: 10px;
+    }
+
+    .search-input:focus {
+        outline: none;
+        background: rgba(255,255,255,0.2);
+    }
+
+    .search-results {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        max-height: 300px;
+        overflow-y: auto;
+        z-index: 1000;
+        display: none;
+    }
+
+    .search-results.active {
+        display: block;
+    }
+
+    .search-result-item {
+        padding: 10px 15px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .search-result-item:hover {
+        background: #f5f5f5;
+    }
+
+    .search-result-item:last-child {
+        border-bottom: none;
+    }
+
+    .search-result-item a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+    }
+
+    .search-result-item:hover a {
+        color: #177f7e;
+    }
+
+    .no-results {
+        padding: 15px;
+        text-align: center;
+        color: #666;
+        font-style: italic;
+    }
+
+    /* Mobile Search Styles - Modern Design */
+    .mobile-search-container {
+        display: none;
+        padding: 15px;
+        background: linear-gradient(135deg, #1a9401 0%, #1a9401 100%);
+        border-bottom: 1px solid #ddd;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .mobile-search-bar {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border-radius: 25px;
+        padding: 8px 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+
+    .mobile-search-bar:focus-within {
+        box-shadow: 0 4px 15px rgba(23, 127, 126, 0.3);
+        transform: translateY(-1px);
+    }
+
+    .search-icon {
+        color: #177f7e;
+        font-size: 16px;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+
+    .mobile-search-input {
+        border: none;
+        outline: none;
+        width: 100%;
+        font-size: 16px;
+        color: #333;
+        background: transparent;
+    }
+
+    .mobile-search-input::placeholder {
+        color: #999;
+    }
+
+    .mobile-search-results {
+        position: absolute;
+        top: 100%;
+        left: 15px;
+        right: 15px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        max-height: 300px;
+        overflow-y: auto;
+        z-index: 1001;
+        display: none;
+        margin-top: 5px;
+    }
+
+    .mobile-search-results.active {
+        display: block;
+    }
+
+    /* Mobile specific result items */
+    .mobile-search-results .search-result-item {
+        padding: 12px 15px;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 14px;
+    }
+
+    .mobile-search-results .search-result-item:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-search-results .search-result-item a {
+        color: #333;
+        font-weight: 500;
+    }
+
+    .mobile-search-results .no-results {
+        padding: 20px 15px;
+        color: #666;
+        font-size: 14px;
+    }
+
+    /* Hide desktop search on mobile */
+    @media (max-width: 1199px) {
+        .desktop-search {
+            display: none !important;
+        }
+        
+        .mobile-search-container {
+            display: block;
+        }
+    }
+
+    /* Hide mobile search on desktop */
+    @media (min-width: 1200px) {
+        .mobile-search-container {
+            display: none !important;
+        }
+    }
+
+    /* Animation for search results */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .mobile-search-results.active {
+        animation: slideDown 0.3s ease;
+    }
+
+    /* Loading state */
+    .search-loading {
+        padding: 15px;
+        text-align: center;
+        color: #666;
+    }
+
+    .search-loading::after {
+        content: '...';
+        animation: dots 1.5s steps(4, end) infinite;
+    }
+
+    @keyframes dots {
+        0%, 20% { content: '.'; }
+        40% { content: '..'; }
+        60%, 100% { content: '...'; }
+    }
+</style>
+
+<div class="page-wrapper">
+    <header class="main-header clearfix">
+        <nav class="main-menu clearfix">
+            <div class="main-menu-wrapper">
+                <div class="main-menu-wrapper__left">
+                    <div class="main-menu-wrapper__logo">
+                        <a href="https://svpistm.ac.in./"><img src="images/slogo.png" style="width:100px" alt="Sardar Vallabhbhai Patel International School of Textiles and Management"></a>
+                    </div>
+                    <div class="main-menu-wrapper__main-menu">
+                        <a href="https://svpistm.ac.in./" class="mobile-nav__toggler">
+                            <span class="mobile-nav__toggler-bar"></span>
+                            <span class="mobile-nav__toggler-bar"></span>
+                            <span class="mobile-nav__toggler-bar"></span>
+                        </a>
+
+                        <ul class="main-menu__list">
+                            <li class="dropdown  ">
+                                <a href="https://svpistm.ac.in./">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="about-us.php">About us</a>
+                                <ul>
+                                    <li><a href="board-of-governors.php">Board of Governors</a></li>
+                                    <li><a href="organizational-chart.php">Organizational Chart</a></li>
+                                    <li><a href="press.php">Press Release</a></li>
+                                    <li><a href="images/documents/MoU.pdf">Industry Collaboration</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Academic</a>
+                                <ul>
+                                    <li><a href="courses.php">Courses</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Faculty</a>
+                                        <ul>
+                                            <li><a class="" href="school-of-textiles-faculty.php">School of Textiles</a></li>
+                                            <li><a class="" href="school-of-management-faculty.php">School of Management</a></li>
+                                            <li><a class="" href="images/documents/Guest faculty AY 2023-24.pdf">Part Time / Guest Faculty </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="images/documents/MoU.pdf">Affiliating university</a></li>
+                                    <li><a href="images/documents/Controller_of_Examination_Assistant _updated.pdf">Controller of Examination - Assistant</a></li>
+                                    <li><a target="_blank"href="images/documents/Academic calender_25-26_(29-08-25).pdf" target="_blank">Academic Calendar</a></li>
+									<li><a target="_blank"href="images/documents/Calendar of Events.pdf" target="_blank">Calendar of Events</a></li>
+									<li class="dropdown">
+                                        <a href="#">Students Manual</a>
+                                        <ul>
+                                            <li><a target="_blank" href="images/documents/B.Sc._Textiles_2025.pdf">B.Sc. Textiles</a></li>
+                                            <li><a target="_blank" href="images/documents/BSC-TECHNICAL_TEXTILE_SYLLABUS_2025.pdf">B.Sc. Technical Textiles</a></li>
+                                            <li><a target="_blank" href="images/documents/B.SC_TAD_2025.pdf">B.Sc. Textiles And Apparel Design</a></li>
+                                            <li><a target="_blank" href="images/documents/BBA _Textile_Business_Analytics_2025.pdf">BBA Textile Business Analytics</a></li>
+                                            <li><a target="_blank" href="images/documents/MBA_Textile_Management_2025.pdf">MBA Textile Management</a></li>
+                                            <li><a target="_blank" href="images/documents/MBA_Apparel_Management_2025.pdf">MBA Apparel Management</a></li>
+                                            <li><a target="_blank" href="images/documents/MBA_Retail_Management_2025.pdf">MBA Retail Management</a></li>
+                                            <li><a target="_blank" href="images/documents/MBA_Technical_Textile_Management_2025.pdf">MBA Technical Textile Management</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">MBA Manual 2025</a>
+                                        <ul>
+                                            <li><a target="_blank" href="images/documents/MBA_Textile_Management_2025.pdf">MBA Textile Management</a></li>
+                                            <li><a target="_blank" href="images/documents/MBA_Apparel_Management_2025.pdf">MBA Apparel Management</a></li>
+                                            <li><a target="_blank" href="images/documents/MBA_Retail_Management_2025.pdf">MBA Retail Management</a></li>
+                                            <li><a target="_blank" href="images/documents/MBA_Technical_Textile_Management_2025.pdf">MBA Technical Textile Management</a></li>
+                                            <li><a target="_blank" href="images/documents/MBA_Textile_Business_Analytics_2025.pdf">MBA Textile Business Analytics</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a target="_blank"href="images/documents/International Study Tour.pdf" target="_blank">Study Tour</a></li>
+                                </ul>                           
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Admission</a>
+                                <ul>
+                                    <li> <a href="images/documents/admission brochure 3 fold.pdf" target="_blank">Brochure</a></li>
+                                    <li> <a href="images/documents/PROSPECTUS 2025-26.pdf" target="_blank">PROSPECTUS 2025-26</a></li>
+                                    <li> <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-5yfRrQKb_84nr5J-j_fwIgmzEKVfrw-spjS3_LWp_chiCA/viewform">Apply Online</a></li>
+                                    <li> <a href="images/documents/NEW APPLICATION FORM 2025-26.pdf" target="_blank">Offline application Form</a></li>
+                                    <li><a href="images/documents/SVPISTM-Foreign National Admissions.pdf"target="_blank">Admission Guidelines For NRI/Foreign Nationals</a></li>
+                                    <li><a href="images/documents/SHORT TERM COURSE APPLICATION FORM-2025.pdf"target="_blank">Short Term Courses</a></li>
+                                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc-5yfRrQKb_84nr5J-j_fwIgmzEKVfrw-spjS3_LWp_chiCA/viewform"target="_blank">For Admission Enquiry</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Placement</a>
+                                <ul>
+                                    <li> <a href="iipc.php">INDUSTRY INSTITUTE PARTNERSHIP CELL (IIPC)</a></li>
+                                    <li><a href="placement-cell.php">Placement Training</a></li>
+                                    <li><a href="placement-recuriters.php">Placement recruiters</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+							    <a href="#">NIRF & NAAC</a>
+							    <ul>
+							        <li><a href="nirf.php">NIRF</a></li>
+							        <li><a href="images/documents/TNCOGN109477_28072022 (1).pdf">NAAC - First Cycle SSR</a></li>
+							        <li><a href="images/documents/Institutional_Grade_Sheet (1).pdf">NAAC - Grade Sheet</a></li>
+							        <li><a href="images/documents/NAAC Quality Index (1).pdf">NAAC - Quality Profile</a></li>
+							        <li><a href="images/documents/NAAC Certificate (1).pdf">NAAC - Certificate</a></li>
+							    </ul>
+							</li>
+							<li class="dropdown"><a href="#">Activity</a>
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="#">Extra-curricular</a>
+                                        <ul>
+                                            <li><a href="upagraha.php">Upagraha</a> </li>
+                                            <li><a href="e-cell.php">E-Cell</a></li>
+                                            <li><a href="eco-club.php">Eco Club</a></li>
+                                            <li><a href="endira-club.php">Endira Club</a></li>
+                                            <li><a href="fashion-club.php">Fashion Club</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Infrastructure</a>
+                                <ul>
+                                    <li><a href="library.php">Library</a></li>
+                                    <li><a href="computer-lab.php">Internet Center</a></li>
+                                    <li><a href="auditorium.php">Auditorium</a></li>
+                                    <li><a href="seminar-hall.php">Seminar Hall</a></li>
+                                    <li><a href="hostel.php">Hostel</a></li>
+                                    <li><a href="#">Cafeteria</a></li>
+                                    <li><a href="security.php">Security</a></li>
+                                    <li><a href="#sports.php">Sports</a></li>
+                                    <li><a href="lab.php">Laboratory</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">UGC</a>
+                                        <ul> 
+                                            <li><a href="images/documents/Barrier_free_environment.pdf" target="_blank">Barrier free environment</a></li>                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="gallery.php">&nbsp;Gallery</a>
+                                <ul>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Other Links</a>
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="#">UGC</a>
+                                        <ul>
+                                            <li><a href="images/documents/Academic_colloboration.pdf" target="_blank">Academic colloboration</a></li>
+                                            <li><a href="images/documents/Barrier_free_environment.pdf" target="_blank">Barrier free environment</a></li>
+											<li><a href="images/documents/FEE_REFUND_POLICY_2025.pdf" target="_blank">FEE REFUND POLICY 2025</a></li>
+                                            <li><a href="images/documents/Internal_Compliance_committee.pdf">Internal Compliance committee</a></li>
+                                            <li><a href="images/documents/Internal_Quality_Assurance_Cell_(IQAC).pdf" target="_blank">Internal Quality Assurance Cell (IQAC)</a></li>
+                                            <li><a href="images/documents/MOA_Society_Registration_(1).pdf" target="_blank">MOA - Society Registration</a></li>
+                                            <li><a href="images/documents/RTI.pdf" target="_blank">RTI</a></li>
+                                            <li><a href="images/documents/SCST.pdf" target="_blank">SCST</a></li>
+											<li><a href="images/documents/Society_Registration_(1).pdf" target="_blank">Society Registration</a></li>
+                                            <li><a href="images/documents/student_grievances_redressal_committee.pdf" target="_blank">Student grievances redressal committe</a></li>
+                                          </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Online Courses</a>
+                                        <ul>
+                                            <li><a href="https://nptel.ac.in/" target="_blank">Mooc</a></li>
+                                            <li><a href="https://swayam.gov.in/" target="_blank">Swayam</a></li>
+                                            <li><a href="https://www.swayamprabha.gov.in/" target="_blank">SwayamPrabha</a></li>
+                                            <li><a href="nodal-officer.php" target="_blank">Nodal Offier</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Alumni</a>
+                                        <ul>  
+                                            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdJqTvCl3FblmigtyEOCDyty6qtWG2SEg_Tli_vTuQ4CKAmtw/viewform?usp=send_form" target="_blank">Alumni Registration</a></li>
+                                            <li><a href="images/documents/Alumni_association.pdf" target="_blank">Alumni association</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="GenderEquity.php" target="_blank">Gender Equity </a></li>
+                                    <li><a href="images/documents/LoA (2021 to 2024).pdf" target="_blank">LOA from AICTE </a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Committee</a>
+                                        <ul>
+                                            <li><a href="images/documents/Committee for Anti ragging - reg.pdf" target="_blank">Committee for Anti-Ragging </a></li>
+                                            <li><a href="images/documents/Committee for GRC (1).pdf" target="_blank">Grievance Redressal Committee</a></li>
+											<li><a href="images/documents/Committee for FGRC (1).pdf" target="_blank">Faculty Grievance Redressal Committee</a></li>
+                                            <li><a href="images/documents/Internal Complaints Committee.pdf">Internal Complaints Committee</a></li>
+                                            <li><a href="images/documents/IQAC COMMITTEE.pdf" target="_blank">IQAC</a></li>
+                                            <li><a href="images/documents/Committee-for-PIO-Ombudsman.pdf" target="_blank">PIO & Ombudsman</a></li>
+                                            <li><a href="images/documents/COMMITTEE-FOR-RESEARCH.pdf" target="_blank">Committee for Research</a></li>
+                                            <li><a href="images/documents/Committee for SC ST (1).PDF" target="_blank">Committee for SC/ST</a></li>
+											<li><a href="images/documents/34. 24 X 7 Women Helpline for Female stud & staff.pdf" target="_blank">24/7 Women Helpline</a></li>
+                                            <li><a href="images/documents/MANDATORY DISCLOSURE (6).pdf" target="_blank">Mandatory Disclosure</a></li>
+                                            <li><a href="https://rtionline.gov.in/guidelines.php?request">Right To Information </a></li>
+                                          </ul>
+                                    </li>
+                                    <li><a href="https://nad.gov.in/" target="_blank">NAD Cell</a> </li>
+                                    <li><a href="images/documents/Research and Training.pdf">Project & Training Programmes</a> </li>
+                                    <li><a href="images/documents/Degree Certificate (2).pdf" target="_blank">UG Degree Certificate</a></li>
+									<li><a href="images/documents/DEGREE CERTIFICATE.pdf" target="_blank">PG Degree Certificate</a></li>
+									<li><a href="images/documents/bsc marksheet sample 2.pdf" target="_blank">Marksheet</a></li>
+                                </ul>
+                            </li>
+                             <li><a href="contact-us.php">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-menu-wrapper__right">
+                    <div class="main-menu-wrapper__social-box">
+                        <div class="main-menu-wrapper__social">
+                            <a href="https://twitter.com/SVPITM" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/svpistmcoimbatore/" class="clr-fb" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.youtube.com/channel/UCbj7ljrVQbzB1DTQo4SARNA" target="_blank" class="clr-ins"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="main-menu-wrapper__phone-contact desktop-search">
+                        <p>Talk to an expert</p>
+                        <a href="tel:+91 88704 79675">+91 88704 79675</a>
+                        &nbsp;&nbsp;
+                        <div class="search-container">
+                            <a href="#" class="clr-ins search-toggle" style="margin-left:10px;">
+                                <i class="fas fa-search fa-lg"></i>
+                            </a>
+                            <input type="text" class="search-input" placeholder="Search menu items...">
+                            <div class="search-results"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Modern Mobile Search Bar - Always Visible -->
+        <div class="mobile-search-container">
+            <div class="mobile-search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="mobile-search-input" placeholder="Search menu items...">
+            </div>
+            <div class="mobile-search-results"></div>
+        </div>
+    </header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Desktop Search Elements
+    const searchToggle = document.querySelector('.search-toggle');
+    const searchInput = document.querySelector('.search-input');
+    const searchResults = document.querySelector('.search-results');
+    
+    // Mobile Search Elements
+    const mobileSearchInput = document.querySelector('.mobile-search-input');
+    const mobileSearchResults = document.querySelector('.mobile-search-results');
+    
+    // Collect all menu items
+    const menuItems = [];
+    
+    function collectMenuItems(element) {
+        const links = element.querySelectorAll('a');
+        links.forEach(link => {
+            if (link.href && link.textContent.trim()) {
+                menuItems.push({
+                    text: link.textContent.trim(),
+                    url: link.href,
+                    target: link.target || '_self'
+                });
+            }
+        });
+        
+        const dropdowns = element.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            collectMenuItems(dropdown);
+        });
+    }
+    
+    const mainMenu = document.querySelector('.main-menu__list');
+    if (mainMenu) {
+        collectMenuItems(mainMenu);
+    }
+    
+    // Remove duplicates
+    const uniqueMenuItems = menuItems.filter((item, index, self) => 
+        index === self.findIndex(t => t.text === item.text && t.url === item.url)
+    );
+    
+    // Desktop Search Toggle
+    if (searchToggle) {
+        searchToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            searchInput.classList.toggle('active');
+            if (searchInput.classList.contains('active')) {
+                searchInput.focus();
+            } else {
+                searchInput.value = '';
+                searchResults.classList.remove('active');
+            }
+        });
+    }
+    
+    // Desktop Search Input
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            performSearch(searchTerm, searchResults);
+        });
+        
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                this.classList.remove('active');
+                searchResults.classList.remove('active');
+                this.value = '';
+            }
+        });
+    }
+    
+    // Mobile Search Input
+    if (mobileSearchInput) {
+        mobileSearchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            performSearch(searchTerm, mobileSearchResults);
+        });
+        
+        mobileSearchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                mobileSearchResults.classList.remove('active');
+                this.value = '';
+            }
+        });
+        
+        // Focus on mobile search when container is clicked
+        document.querySelector('.mobile-search-bar').addEventListener('click', function() {
+            mobileSearchInput.focus();
+        });
+    }
+    
+    // Common Search Function
+    function performSearch(searchTerm, resultsContainer) {
+        if (searchTerm.length < 2) {
+            resultsContainer.classList.remove('active');
+            return;
+        }
+        
+        // Show loading state
+        resultsContainer.innerHTML = '<div class="search-loading">Searching</div>';
+        resultsContainer.classList.add('active');
+        
+        // Simulate search delay for better UX
+        setTimeout(() => {
+            const filteredItems = uniqueMenuItems.filter(item => 
+                item.text.toLowerCase().includes(searchTerm)
+            );
+            
+            displayResults(filteredItems, resultsContainer);
+        }, 300);
+    }
+    
+    // Display Results
+    function displayResults(results, container) {
+        container.innerHTML = '';
+        
+        if (results.length === 0) {
+            container.innerHTML = '<div class="no-results">No results found</div>';
+        } else {
+            results.forEach(item => {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'search-result-item';
+                resultItem.innerHTML = `<a href="${item.url}" target="${item.target}">${item.text}</a>`;
+                container.appendChild(resultItem);
+            });
+        }
+        
+        container.classList.add('active');
+    }
+    
+    // Close search when clicking outside
+    document.addEventListener('click', function(e) {
+        // Desktop search
+        if (!e.target.closest('.search-container')) {
+            if (searchInput) {
+                searchInput.classList.remove('active');
+                searchResults.classList.remove('active');
+                searchInput.value = '';
+            }
+        }
+        
+        // Mobile search
+        if (!e.target.closest('.mobile-search-container')) {
+            if (mobileSearchResults) {
+                mobileSearchResults.classList.remove('active');
+            }
+        }
+    });
+    
+    // Handle result clicks
+    function setupResultClickHandler(container, inputElement) {
+        container.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                container.classList.remove('active');
+                if (inputElement) {
+                    inputElement.value = '';
+                }
+            }
+        });
+    }
+    
+    // Setup click handlers
+    if (searchResults) setupResultClickHandler(searchResults, searchInput);
+    if (mobileSearchResults) setupResultClickHandler(mobileSearchResults, mobileSearchInput);
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        // Close all search results on resize
+        if (searchResults) searchResults.classList.remove('active');
+        if (mobileSearchResults) mobileSearchResults.classList.remove('active');
+    });
+});
+</script>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Core Energy Tabs</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  />
+
+  <!-- AOS Animation -->
+  <link
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* ======= SECTION ======= */
+    .core-mo-tab-section {
+      background: #fff;
+      padding: 60px 0;
+    }
+
+    /* ======= TABS NAVIGATION ======= */
+    .core-tabs-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e0e0e0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      flex-wrap: nowrap; /* ✅ keep in one line */
+      overflow: hidden; /* ✅ prevent scroll */
+      gap: 0;
+    }
+
+    .core-tab-item {
+      cursor: pointer;
+      flex: 1; /* ✅ equal width */
+      text-align: center;
+      padding: 14px 10px;
+      border-radius: 0;
+      transition: all 0.3s ease;
+      background-color: transparent;
+      border-bottom: 3px solid transparent;
+    }
+
+    .core-tab-item.active {
+      border-bottom: 2px solid #007a3d; /* ✅ green underline */
+      background-color: #e7f5eb; /* ✅ light green background */
+      margin-top: 23px;
+    }
+.tab-green-btaa{
+    margin-top: 20px;
+}
+    .core-no-tabb-h5 {
+      font-size: 15px;
+      font-weight: 500;
+      color: #505050;
+      margin: 0;
+      line-height: 1.4;
+      white-space: normal; /* ✅ keep text readable */
+    }
+
+    /* ======= CONTENT ======= */
+    .core-tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+      padding-top: 20px;
+    }
+
+    .core-tab-content.active {
+      display: block;
+    }
+
+    .core-tab-img img {
+      border-radius: 10px;
+      
+      margin: 0 auto;
+      display: flex;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .core-tab-text h3 {
+      font-size: 28px;
+      margin-bottom: 16px;
+      color: #111111;
+      font-weight: 600;
+    }
+
+      .core-tab-text span {
+        font-weight: 600;
+         color: #111111;
+      }
+
+    .core-tab-text p {
+      color: #555;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .core-tab-btn {
+      display: inline-block;
+      padding: 10px 24px;
+      background-color: #007a3d;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .core-tab-btn:hover {
+      background-color: #005d2a;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ======= RESPONSIVE (Optional) ======= */
+    @media (max-width: 768px) {
+      .core-tabs-nav {
+        flex-wrap: wrap; /* stack tabs if too narrow */
+      }
+
+      .core-tab-item {
+        flex: 100%;
+        border-bottom: 2px solid #e0e0e0;
+      }
+
+      .core-tab-item.active {
+        border-bottom: 2px solid #007a3d;
+      }
+    }
+
+    .border-mo-tab{
+       
+        border-bottom: 1px solid #0000001C;
+        margin-bottom: 10px;
+    }
+
+    .core-mo-tab-section-h3{
+        font-size: 40px;
+        color: #111111;
+        text-align: center;
+    }
+
+    
+    .core-mo-tab-section-p{
+      
+        color: #4B4B4B;
+          text-align: center;
+          width: 43%;
+          margin: 0 auto;
+          padding-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Core Energy Tab Section -->
+  <section class="core-mo-tab-section">
+    <div class="container">
+
+        <h3 class="core-mo-tab-section-h3">Our Core Energy Modeling Services</h3>
+        <p class="core-mo-tab-section-p">We offer a comprehensive suite of modeling services tailored to every stage of your project</p>
+      <div class="row">
+        <div class="col-12">
+          <!-- Tab Navigation -->
+          <ul class="core-tabs-nav list-unstyled">
+            <li class="core-tab-item active" data-tab="tab1">
+              <h5 class="core-no-tabb-h5">
+                Design Optimization & Performance Analysis
+              </h5>
+            </li>
+            <li class="core-tab-item" data-tab="tab2">
+              <h5 class="core-no-tabb-h5">Climate & Site Studied</h5>
+            </li>
+            <li class="core-tab-item" data-tab="tab3">
+              <h5 class="core-no-tabb-h5">Thermal Envelope Studies</h5>
+            </li>
+            <li class="core-tab-item" data-tab="tab4">
+              <h5 class="core-no-tabb-h5">Thermal Comfort Studies</h5>
+            </li>
+            <li class="core-tab-item" data-tab="tab5">
+              <h5 class="core-no-tabb-h5">
+                Code Compliance & Certification Support
+              </h5>
+            </li>
+            <li class="core-tab-item" data-tab="tab6">
+              <h5 class="core-no-tabb-h5">
+                Energy Audits & Existing Building Retrofit
+              </h5>
+            </li>
+          </ul>
+
+          <!-- Tab Content -->
+          <div class="core-tab-content-wrapper mt-4">
+            <!-- TAB 1 -->
+            <div class="core-tab-content active" id="tab1">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="core-tab-img">
+                    <img
+                      src="images/Our Core Energy Modeling Services.png"
+                      alt="Design Optimization"
+                      class="img-fluid rounded shadow"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="core-tab-text">
+                    <h3 class="core-tab-text-h33">Design Optimization & Performance Analysis</h3>
+                    <p>
+
+                        
+                      <span>Early-Stage Massing & Orientation Studies:</span>
+                      Determine the best shape and position for your building to
+                      minimize solar gain and maximize daylighting.
+                    </p>
+                    <div class="border-mo-tab"></div>
+                    <p>
+
+                        
+                      <span>System Sizing & Selection:</span> Optimize
+                      system size for energy efficiency and comfort.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Baseline vs. Proposed Analysis:</span> Compare
+                      design outcomes for energy efficiency improvements.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Design Optimizations:</span> Refine your design
+                      for maximum performance and sustainability.
+                    </p>
+                     <div class="tab-green-btaa">
+                    <a class="new-mo-about-btn" href="">View Services</a>
+                 </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 2 -->
+            <div class="core-tab-content" id="tab2">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="core-tab-img">
+                    <img
+                      src="images/Our Core Energy Modeling Services.png"
+                      alt="Climate & Site"
+                      class="img-fluid rounded shadow"
+                    />
+                  </div>
+                </div>
+                 <div class="col-md-6">
+                  <div class="core-tab-text">
+                    <h3 class="core-tab-text-h33">Design Optimization & Performance Analysis</h3>
+                    <p>
+
+                        
+                      <span>Early-Stage Massing & Orientation Studies:</span>
+                      Determine the best shape and position for your building to
+                      minimize solar gain and maximize daylighting.
+                    </p>
+                    <div class="border-mo-tab"></div>
+                    <p>
+
+                        
+                      <span>System Sizing & Selection:</span> Optimize
+                      system size for energy efficiency and comfort.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Baseline vs. Proposed Analysis:</span> Compare
+                      design outcomes for energy efficiency improvements.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Design Optimizations:</span> Refine your design
+                      for maximum performance and sustainability.
+                    </p>
+                     <div class="tab-green-btaa">
+                    <a class="new-mo-about-btn" href="">View Services</a>
+                 </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 3–6 (You can copy similar structure) -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JS for Tabs -->
+  <script>
+    document.querySelectorAll(".core-tab-item").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        document
+          .querySelectorAll(".core-tab-item")
+          .forEach((t) => t.classList.remove("active"));
+        document
+          .querySelectorAll(".core-tab-content")
+          .forEach((c) => c.classList.remove("active"));
+
+        tab.classList.add("active");
+        document
+          .getElementById(tab.getAttribute("data-tab"))
+          .classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>

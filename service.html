@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/animate/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="plugins/navbar/stellarnav.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/lightbox/lightgallery.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/lightbox/lg-transitions.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/jquery-modal/jquery.modal.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/icon/bootstrap-icons.css">
+  <!-- <link rel="stylesheet" type="text/css" href="plugins/animateonscroll/aos.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="text/css" href="css/responsive.css">
+</head>
+<body>
+    
+
+<script>
+  AOS.init({
+    duration: 1000,      // animation duration (in ms)
+    once: true,           // animation only happens once
+    easing: "ease-in-out" // smooth animation
+  });
+</script>
+
+     <header class="modp-main-heading animate__fadeInRight">
+    <div class="container">
+      <div class="col-lg-2">
+        <div class="logo">
+          <img  class="modp-main-heading-img" src="images/modb-logo.webp">
+        </div>
+      </div>
+    <div class="col-lg-8">
+  <nav class="modo-unique-nav">
+    <ul class="modo-unique-nav-ul">
+      <!-- Dropdown 1 -->
+      <li class="modo-unique-nav-item has-dropdown">
+        <a href="#">What We Do</a>
+        <ul class="modo-unique-dropdown">
+          <li><a href="#">Service 1</a></li>
+          <li><a href="#">Service 2</a></li>
+          <li><a href="#">Service 3</a></li>
+        </ul>
+      </li>
+
+      <!-- Dropdown 2 -->
+      <li class="modo-unique-nav-item has-dropdown">
+        <a href="#">Who We Are</a>
+        <ul class="modo-unique-dropdown">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Mission & Vision</a></li>
+        </ul>
+      </li>
+
+      <!-- Normal -->
+      <li class="modo-unique-nav-item"><a href="#">Our Projects</a></li>
+      <li class="modo-unique-nav-item"><a href="#">Case Studies</a></li>
+      <li class="modo-unique-nav-item"><a href="#">Careers</a></li>
+      <li class="modo-unique-nav-item"><a href="#">Insights</a></li>
+
+      <!-- Dropdown 3 -->
+      <li class="modo-unique-nav-item has-dropdown">
+        <a href="#">Resources</a>
+        <ul class="modo-unique-dropdown">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Whitepapers</a></li>
+          <li><a href="#">Downloads</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+      <div class="col-lg-2">
+        <a href="#" class="contact-btn">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const dropdownParents = document.querySelectorAll(".has-dropdown");
+
+  dropdownParents.forEach(item => {
+    // Show dropdown on hover
+    item.addEventListener("mouseenter", () => {
+      item.classList.add("show-dropdown");
+    });
+
+    // Hide dropdown when mouse leaves
+    item.addEventListener("mouseleave", () => {
+      item.classList.remove("show-dropdown");
+    });
+  });
+});
+</script>
+
+<!-- mobile nav-->
+<nav class="modo-mobile-nav">
+  <div class="modo-mobile-container">
+    <div class="modo-mobile-header">
+      <a href="#" class="modo-mobile-logo"><img  class="modo-mobile-logo-imm" src="images/modb-logo.webp" alt=""></a>
+
+      <!-- Unique white mobile toggle button -->
+      <div class="modo-mobile-toggle-btn" id="modoMenuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <ul class="modo-mobile-menu">
+      <!-- Dropdown 1 -->
+      <li class="modo-mobile-item has-mobile-dropdown">
+        <a href="#">What We Do</a>
+        <ul class="modo-mobile-dropdown">
+          <li><a href="#">Service 1</a></li>
+          <li><a href="#">Service 2</a></li>
+          <li><a href="#">Service 3</a></li>
+        </ul>
+      </li>
+
+      <!-- Dropdown 2 -->
+      <li class="modo-mobile-item has-mobile-dropdown">
+        <a href="#">Who We Are</a>
+        <ul class="modo-mobile-dropdown">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Mission & Vision</a></li>
+        </ul>
+      </li>
+
+      <!-- Normal Links -->
+      <li class="modo-mobile-item"><a href="#">Our Projects</a></li>
+      <li class="modo-mobile-item"><a href="#">Case Studies</a></li>
+      <li class="modo-mobile-item"><a href="#">Careers</a></li>
+      <li class="modo-mobile-item"><a href="#">Insights</a></li>
+
+      <!-- Dropdown 3 -->
+      <li class="modo-mobile-item has-mobile-dropdown">
+        <a href="#">Resources</a>
+        <ul class="modo-mobile-dropdown">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Whitepapers</a></li>
+          <li><a href="#">Downloads</a></li>
+        </ul>
+      </li>
+
+      <!-- Contact -->
+      <li><a href="#" class="modo-mobile-contact">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("modoMenuToggle");
+  const menu = document.querySelector(".modo-mobile-menu");
+  const dropdowns = document.querySelectorAll(".has-mobile-dropdown");
+
+  toggleBtn.addEventListener("click", () => {
+    toggleBtn.classList.toggle("active");
+    menu.classList.toggle("show");
+  });
+
+  dropdowns.forEach(drop => {
+    drop.addEventListener("click", function (e) {
+      e.stopPropagation();
+      this.classList.toggle("open");
+      const dropdownMenu = this.querySelector(".modo-mobile-dropdown");
+      dropdownMenu.style.display =
+        dropdownMenu.style.display === "flex" ? "none" : "flex";
+    });
+  });
+});
+</script>
+
+    <!-- page top banner-->
+
+<section class="modb-page-topbanner-section">
+  <div class="modb-banner-overlay">
+    <div class="container">
+      <div class="modb-page-topbanner-section-content text-center" data-aos="fade-down">
+        <h2 class="modb-banner-title">Energy Modeling</h2>
+        <p class="modb-banner-breadcrumb">
+          <a href="#" class="modb-banner-home">Home</a>
+          <span>/</span>
+          <a href="#" class="modb-banner-current">Services</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- building ene section -->
+
+
+<section class="building-en-mo-section">
+    <div class="container">
+        <div class="row d-flex  align-items-center">
+            <div class="col-md-6">
+                <div class="building-en-mo-section-left" data-aos="fade-right"
+     data-aos-duration="1000" data-aos-once="true" >
+<h6 class="new-mo-about-tag-z">
+Building Energy Modeling (BEM)
+</h6>
+
+<h3  class="building-en-mo-section-left-h3">Optimize Performance. Reduce Costs. Build Sustainably.</h3>
+
+
+<div class="optimise-row-div">
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <div  class="building-en-mo-section-left-uldiv">
+   <ul  class="building-en-mo-section-left-ul">
+    <li  class="building-en-mo-section-left-li">
+        <img  class="building-en-mo-section-iocn" src="images/optimise.png" alt=""> Energy consumption
+    </li>
+      <li  class="building-en-mo-section-left-li">
+        <img  class="building-en-mo-section-iocn" src="images/optimise.png" alt=""> Energy consumption
+    </li>
+   </ul>
+</div>
+            </div>
+        </div>
+         <div class="col-md-6">
+            <div>
+                <div  class="building-en-mo-section-left-uldiv">
+   <ul  class="building-en-mo-section-left-ul">
+    <li  class="building-en-mo-section-left-li">
+        <img  class="building-en-mo-section-iocn" src="images/optimise.png" alt=""> Energy consumption
+    </li>
+     <li  class="building-en-mo-section-left-li">
+        <img  class="building-en-mo-section-iocn" src="images/optimise.png" alt=""> Energy consumption
+    </li>
+   </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="building-en-mo-section-left-btdiv">
+    <a href="" class="new-mo-about-btn">Start Modelling</a>
+</div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="building-en-mo-section-right" >
+<p data-aos="fade-left"
+     data-aos-duration="1000" data-aos-once="true"  class="building-en-mo-section-right-p">Transform your building’s efficiency and value. Reduce energy costs, achieve sustainability goals, and ensure your design meets the highest performance standards.
+
+</p>
+
+<div class="building-en-mo-section-right-imdiv" data-aos="zoom-in-up">
+    <img class="building-en-mo-section-right-img" src="images/Optimize Performance.jpg" alt="">
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- what is building section -->
+
+<section class="mo-what-build-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div  class="mo-what-build-section-left" data-aos="fade-right"
+     data-aos-duration="1000" data-aos-once="true" >
+<img  class="mo-what-build-section-left-img" src="images/Building Energy Modeling.jpg" alt="">
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div  class="mo-what-build-section-right" data-aos="fade-left"
+     data-aos-duration="1000" data-aos-once="true" >
+                    <h3  class="mo-what-build-section-right-h3">What is Building Energy Modeling?</h3>
+                    <p  class="mo-what-build-section-right-p">BEM uses advanced software tools to simulate a building’s energy consumption, thermal comfort, lighting, and HVAC performance. It enables data-driven decisions throughout the design and operational phases of a building’s lifecycle.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- energy modal section -->
+
+<section class="energy-model-section">
+    <div class="container">
+        <div class="row d-flex  align-items-center">
+            <div class="col-md-6">
+                <div class="energy-model-section-left" data-aos="fade-right"
+     data-aos-duration="1000" data-aos-once="true" >
+<h3  class="energy-model-section-left-h3">Energy Model Report Output</h3>
+<p  class="energy-model-section-left-p">Our Energy Model Report presents detailed insights through visual data and simulations, similar to advanced software reports like IES VE. It includes both analytical and graphical outputs for quick understanding and decision-making.
+
+</p>
+
+
+
+<div class="optimise-row-div">
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <div  class="building-en-mo-section-left-uldiv" >
+   <ul  class="building-en-mo-section-left-ul">
+    <li  class="building-en-mo-section-left-li">
+        <img  class="building-en-mo-section-iocn" src="images/optimise.png" alt=""> Project Summary
+    </li>
+      <li  class="building-en-mo-section-left-li">
+        <img  class="building-en-mo-section-iocn" src="images/optimise.png" alt=""> 3D Building Simulation View
+    </li>
+      <li  class="building-en-mo-section-left-li">
+        <img  class="building-en-mo-section-iocn" src="images/optimise.png" alt=""> Monthly Energy Dashboard
+    </li>
+      <li  class="building-en-mo-section-left-li">
+        <img  class="building-en-mo-section-iocn" src="images/optimise.png" alt=""> Energy Flow Diagram (Sankey)
+    </li>
+   </ul>
+</div>
+            </div>
+        </div>
+         <div class="col-md-6">
+            <div>
+                <div  class="building-en-mo-section-left-uldiv">
+   <ul  class="building-en-mo-section-left-ul">
+    <li  class="building-en-mo-section-left-li">
+        <img  class="building-en-mo-section-iocn" src="images/optimise.png" alt="">Annual Energy Consumption
+    </li>
+     <li  class="building-en-mo-section-left-li">
+        <img  class="building-en-mo-section-iocn" src="images/optimise.png" alt=""> Energy Use Intensity (EUI)
+    </li>
+     <li  class="building-en-mo-section-left-li">
+        <img  class="building-en-mo-section-iocn" src="images/optimise.png" alt=""> Annual Fuel Cost & Peak Demand
+    </li>
+     <li  class="building-en-mo-section-left-li">
+        <img  class="building-en-mo-section-iocn" src="images/optimise.png" alt=""> Peak Load Profiles
+    </li>
+   </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div  class="energy-model-section-rigfht" data-aos="fade-left"
+     data-aos-duration="1000" data-aos-once="true" >
+<img   class="energy-model-section-rigfht-img" src="images/Energy Model Report.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- the  power behind section-->
+<section class="power-behind-section">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div  class="power-behind-section-left" >
+                <h3   data-aos="fade-up" class="power-behind-section-left-h3">The Power Behind Smarter Buildings</h3>
+
+            </div>
+        </div>
+          <div class="col-md-6">
+            <div  class="power-behind-section-right">
+              <p class="power-behind-section-right-p" data-aos="fade-up">Our expert energy modeling services give you the data-driven insights needed to make smart, cost-effective decisions that lead to a truly high-performance building.
+
+              </p>
+
+            </div>
+        </div>
+    </div>
+
+<div class="tahe-power-col-maindiv">
+  <div class="row">
+   
+
+<div class="tahe-power-col-maindiv-content" data-aos="flip-left">
+<div class="cost-effi-iconimg-div">
+    <img   class="cost-effi-iconimg" src="images/Energy Efficiency.png" alt="">
+</div>
+<h5 class="tahe-power-col-maindiv-content-h5">Energy Efficiency</h5>
+<p class="tahe-power-col-maindiv-content-p"> Identify opportunities to reduce energy use and carbon emissions.</p>
+
+
+</div>
+
+<div class="tahe-power-col-maindiv-content" data-aos="flip-right">
+<div class="cost-effi-iconimg-div">
+    <img   class="cost-effi-iconimg" src="images/Cost Savings.png" alt="">
+</div>
+<h5 class="tahe-power-col-maindiv-content-h5">Cost Savings</h5>
+<p class="tahe-power-col-maindiv-content-p"> Identify opportunities to reduce energy use and carbon emissions.</p>
+
+
+</div>
+
+<div class="tahe-power-col-maindiv-content" data-aos="flip-left">
+<div class="cost-effi-iconimg-div">
+    <img   class="cost-effi-iconimg" src="images/Sustainability Compliance.png" alt="">
+</div>
+<h5 class="tahe-power-col-maindiv-content-h5">Sustainability Compliance</h5>
+<p class="tahe-power-col-maindiv-content-p"> Identify opportunities to reduce energy use and carbon emissions.</p>
+
+
+</div>
+
+<div class="tahe-power-col-maindiv-content" data-aos="flip-right">
+<div class="cost-effi-iconimg-div">
+    <img   class="cost-effi-iconimg" src="images/Design Validation.png" alt="">
+</div>
+<h5 class="tahe-power-col-maindiv-content-h5">Design Validation</h5>
+<p class="tahe-power-col-maindiv-content-p"> Identify opportunities to reduce energy use and carbon emissions.</p>
+
+
+</div>
+
+<div class="tahe-power-col-maindiv-content" data-aos="flip-left">
+<div class="cost-effi-iconimg-div">
+    <img   class="cost-effi-iconimg" src="images/Performance Forecasting.png" alt="">
+</div>
+<h5 class="tahe-power-col-maindiv-content-h5">Performance Forecasting</h5>
+<p class="tahe-power-col-maindiv-content-p"> Identify opportunities to reduce energy use and carbon emissions.</p>
+
+
+</div>
+
+  
+  
+  </div>
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- Core Energy Tab Section -->
+  <section class="core-mo-tab-section">
+    <div class="container">
+
+        <h3 class="core-mo-tab-section-h3"  data-aos="fade-up">Our Core Energy Modeling Services</h3>
+        <p class="core-mo-tab-section-p"  data-aos="fade-up">We offer a comprehensive suite of modeling services tailored to every stage of your project</p>
+      <div class="row">
+        <div class="col-12">
+          <!-- Tab Navigation -->
+          <ul class="core-tabs-nav list-unstyled"  data-aos="fade-up">
+            <li class="core-tab-item active" data-tab="tab1">
+              <h5 class="core-no-tabb-h5">
+                Design Optimization & Performance Analysis
+              </h5>
+            </li>
+            <li class="core-tab-item" data-tab="tab2">
+              <h5 class="core-no-tabb-h5">Climate & Site Studied</h5>
+            </li>
+            <li class="core-tab-item" data-tab="tab3">
+              <h5 class="core-no-tabb-h5">Thermal Envelope Studies</h5>
+            </li>
+            <li class="core-tab-item" data-tab="tab4">
+              <h5 class="core-no-tabb-h5">Thermal Comfort Studies</h5>
+            </li>
+            <li class="core-tab-item" data-tab="tab5">
+              <h5 class="core-no-tabb-h5">
+                Code Compliance & Certification Support
+              </h5>
+            </li>
+            <li class="core-tab-item" data-tab="tab6">
+              <h5 class="core-no-tabb-h5">
+                Energy Audits & Existing Building Retrofit
+              </h5>
+            </li>
+          </ul>
+
+          <!-- Tab Content -->
+          <div class="core-tab-content-wrapper mt-4">
+            <!-- TAB 1 -->
+            <div class="core-tab-content active" id="tab1">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="core-tab-img" data-aos="fade-right"> 
+                    <img
+                      src="images/Our Core Energy Modeling Services.png"
+                      alt="Design Optimization"
+                      class="img-fluid rounded shadow"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="core-tab-text" data-aos="fade-left">
+                    <h3 class="core-tab-text-h33">Design Optimization & Performance Analysis</h3>
+                    <p>
+
+                        
+                      <span>Early-Stage Massing & Orientation Studies:</span>
+                      Determine the best shape and position for your building to
+                      minimize solar gain and maximize daylighting.
+                    </p>
+                    <div class="border-mo-tab"></div>
+                    <p>
+
+                        
+                      <span>System Sizing & Selection:</span> Optimize
+                      system size for energy efficiency and comfort.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Baseline vs. Proposed Analysis:</span> Compare
+                      design outcomes for energy efficiency improvements.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Design Optimizations:</span> Refine your design
+                      for maximum performance and sustainability.
+                    </p>
+                     <div class="tab-green-btaa">
+                    <a class="new-mo-about-btn" href="">View Services</a>
+                 </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 2 -->
+            <div class="core-tab-content" id="tab2">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="core-tab-img">
+                    <img
+                      src="images/Our Core Energy Modeling Services.png"
+                      alt="Climate & Site"
+                      class="img-fluid rounded shadow"
+                    />
+                  </div>
+                </div>
+                 <div class="col-md-6">
+                  <div class="core-tab-text">
+                    <h3 class="core-tab-text-h33">Design Optimization & Performance Analysis</h3>
+                    <p>
+
+                        
+                      <span>Early-Stage Massing & Orientation Studies:</span>
+                      Determine the best shape and position for your building to
+                      minimize solar gain and maximize daylighting.
+                    </p>
+                    <div class="border-mo-tab"></div>
+                    <p>
+
+                        
+                      <span>System Sizing & Selection:</span> Optimize
+                      system size for energy efficiency and comfort.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Baseline vs. Proposed Analysis:</span> Compare
+                      design outcomes for energy efficiency improvements.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Design Optimizations:</span> Refine your design
+                      for maximum performance and sustainability.
+                    </p>
+                     <div class="tab-green-btaa">
+                    <a class="new-mo-about-btn" href="">View Services</a>
+                 </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 3–6 (You can copy similar structure) -->
+              <div class="core-tab-content" id="tab3">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="core-tab-img">
+                    <img
+                      src="images/Our Core Energy Modeling Services.png"
+                      alt="Climate & Site"
+                      class="img-fluid rounded shadow"
+                    />
+                  </div>
+                </div>
+                 <div class="col-md-6">
+                  <div class="core-tab-text">
+                    <h3 class="core-tab-text-h33">Design Optimization & Performance Analysis</h3>
+                    <p>
+
+                        
+                      <span>Early-Stage Massing & Orientation Studies:</span>
+                      Determine the best shape and position for your building to
+                      minimize solar gain and maximize daylighting.
+                    </p>
+                    <div class="border-mo-tab"></div>
+                    <p>
+
+                        
+                      <span>System Sizing & Selection:</span> Optimize
+                      system size for energy efficiency and comfort.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Baseline vs. Proposed Analysis:</span> Compare
+                      design outcomes for energy efficiency improvements.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Design Optimizations:</span> Refine your design
+                      for maximum performance and sustainability.
+                    </p>
+                     <div class="tab-green-btaa">
+                    <a class="new-mo-about-btn" href="">View Services</a>
+                 </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+ <div class="core-tab-content" id="tab4">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="core-tab-img">
+                    <img
+                      src="images/Our Core Energy Modeling Services.png"
+                      alt="Climate & Site"
+                      class="img-fluid rounded shadow"
+                    />
+                  </div>
+                </div>
+                 <div class="col-md-6">
+                  <div class="core-tab-text">
+                    <h3 class="core-tab-text-h33">Design Optimization & Performance Analysis</h3>
+                    <p>
+
+                        
+                      <span>Early-Stage Massing & Orientation Studies:</span>
+                      Determine the best shape and position for your building to
+                      minimize solar gain and maximize daylighting.
+                    </p>
+                    <div class="border-mo-tab"></div>
+                    <p>
+
+                        
+                      <span>System Sizing & Selection:</span> Optimize
+                      system size for energy efficiency and comfort.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Baseline vs. Proposed Analysis:</span> Compare
+                      design outcomes for energy efficiency improvements.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Design Optimizations:</span> Refine your design
+                      for maximum performance and sustainability.
+                    </p>
+                     <div class="tab-green-btaa">
+                    <a class="new-mo-about-btn" href="">View Services</a>
+                 </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+             <div class="core-tab-content" id="tab5">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="core-tab-img">
+                    <img
+                      src="images/Our Core Energy Modeling Services.png"
+                      alt="Climate & Site"
+                      class="img-fluid rounded shadow"
+                    />
+                  </div>
+                </div>
+                 <div class="col-md-6">
+                  <div class="core-tab-text">
+                    <h3 class="core-tab-text-h33">Design Optimization & Performance Analysis</h3>
+                    <p>
+
+                        
+                      <span>Early-Stage Massing & Orientation Studies:</span>
+                      Determine the best shape and position for your building to
+                      minimize solar gain and maximize daylighting.
+                    </p>
+                    <div class="border-mo-tab"></div>
+                    <p>
+
+                        
+                      <span>System Sizing & Selection:</span> Optimize
+                      system size for energy efficiency and comfort.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Baseline vs. Proposed Analysis:</span> Compare
+                      design outcomes for energy efficiency improvements.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Design Optimizations:</span> Refine your design
+                      for maximum performance and sustainability.
+                    </p>
+                     <div class="tab-green-btaa">
+                    <a class="new-mo-about-btn" href="">View Services</a>
+                 </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+             <div class="core-tab-content" id="tab6">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="core-tab-img">
+                    <img
+                      src="images/Our Core Energy Modeling Services.png"
+                      alt="Climate & Site"
+                      class="img-fluid rounded shadow"
+                    />
+                  </div>
+                </div>
+                 <div class="col-md-6">
+                  <div class="core-tab-text">
+                    <h3 class="core-tab-text-h33">Design Optimization & Performance Analysis</h3>
+                    <p>
+
+                        
+                      <span>Early-Stage Massing & Orientation Studies:</span>
+                      Determine the best shape and position for your building to
+                      minimize solar gain and maximize daylighting.
+                    </p>
+                    <div class="border-mo-tab"></div>
+                    <p>
+
+                        
+                      <span>System Sizing & Selection:</span> Optimize
+                      system size for energy efficiency and comfort.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Baseline vs. Proposed Analysis:</span> Compare
+                      design outcomes for energy efficiency improvements.
+                    </p>
+
+                    <div class="border-mo-tab"></div>
+                    <p>
+                      <span>Design Optimizations:</span> Refine your design
+                      for maximum performance and sustainability.
+                    </p>
+                     <div class="tab-green-btaa">
+                    <a class="new-mo-about-btn" href="">View Services</a>
+                 </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JS for Tabs -->
+  <script>
+    document.querySelectorAll(".core-tab-item").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        document
+          .querySelectorAll(".core-tab-item")
+          .forEach((t) => t.classList.remove("active"));
+        document
+          .querySelectorAll(".core-tab-content")
+          .forEach((c) => c.classList.remove("active"));
+
+        tab.classList.add("active");
+        document
+          .getElementById(tab.getAttribute("data-tab"))
+          .classList.add("active");
+      });
+    });
+  </script>
+
+
+
+<!-- WHY CHOOSE WHAT MAKE SECTION -->
+
+<section class="mo-mian-whychoose-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="mo-mian-whychoose-section-left" data-aos="fade-right">
+<h6 class="new-mo-about-tag-a">Why choose Us</h6>
+
+<h3 class="new-mo-about-tag-a-h3">What Makes
+Us Different</h3>
+
+<p class="new-mo-about-tag-a-p">We combine expertise, technology, and data to deliver efficient, high-performing buildings.</p>
+
+
+<div class="new-mo-about-tag-a-btaa">
+    <a class="new-mo-about-btn" href="">Schedule a Demo</a>
+</div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="mo-mian-whychoose-section-center" data-aos="zoom-in-up">
+<img class="mo-mian-whychoose-section-center-img" src="images/why-choose-moo.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div  class="mo-mian-whychoose-section-right"  data-aos="fade-left">
+<ul  class="mo-mian-whychoose-section-right-ul">
+    <li  class="mo-mian-whychoose-section-right-li">
+      
+            <img  class="mo-mian-whychoose-section-right-img" src="images/Expert Analysts.png" alt="">
+        
+        <div class="mo-mian-whychoose-section-rig-fldiv">
+            <h5 class="mo-mian-whychoose-section-rig-fldiv-h5">Expert Analysts</h5>
+        <p class="mo-mian-whychoose-section-rig-fldiv-p">Our team holds advanced certifications and deep experience across various building types (commercial, residential, educational, healthcare).</p>
+        </div>
+    </li>
+
+ <li  class="mo-mian-whychoose-section-right-li">
+      
+            <img  class="mo-mian-whychoose-section-right-img" src="images/Integrated Approach.png" alt="">
+        
+        <div class="mo-mian-whychoose-section-rig-fldiv">
+            <h5 class="mo-mian-whychoose-section-rig-fldiv-h5">Integrated Approach</h5>
+        <p class="mo-mian-whychoose-section-rig-fldiv-p">We work seamlessly with architects, engineers, and contractors, integrating the modeling process into the design workflow.</p>
+        </div>
+    </li>
+
+     <li  class="mo-mian-whychoose-section-right-li">
+      
+            <img  class="mo-mian-whychoose-section-right-img" src="images/Actionable Insights.png" alt="">
+        
+        <div class="mo-mian-whychoose-section-rig-fldiv">
+            <h5 class="mo-mian-whychoose-section-rig-fldiv-h5">Actionable Insights</h5>
+        <p class="mo-mian-whychoose-section-rig-fldiv-p">We deliver clear, visual reports that go beyond raw data, providing specific, prioritized recommendations for maximizing savings.</p>
+        </div>
+    </li>
+
+     <li style="border: none !important;"  class="mo-mian-whychoose-section-right-li">
+      
+            <img  class="mo-mian-whychoose-section-right-img" src="images/Advanced Software.png" alt="">
+        
+        <div class="mo-mian-whychoose-section-rig-fldiv">
+            <h5 class="mo-mian-whychoose-section-rig-fldiv-h5">Advanced Software</h5>
+        <p class="mo-mian-whychoose-section-rig-fldiv-p">We utilize industry-leading tools (e.g., EnergyPlus, DesignBuilder , IES-VE) to ensure accuracy and detail in every simulation.</p>
+        </div>
+    </li>
+
+
+
+
+
+</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- tools use section
+ 
+-->
+
+<section class="mo-tools-use-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="mo-tools-use-section-main">
+<h6 class="new-mo-about-tag-c" data-aos="fade-up">Tools We Use</h6>
+<h3  class="mo-tools-use-section-h3" data-aos="fade-up">We leverage industry-leading platforms such as</h3>
+
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div  class="mo-tools-use-section-flex-divv">
+         <div  class="mo-tools-use-section-flex-content">
+        <div class="mo-tools-use-section-flex-contentim-div" data-aos="zoom-in-up"> 
+            <img class="mo-tools-use-section-flex-content-img" src="images/IES VE.png" alt="">
+        </div>
+
+       <h5 class="mo-tools-use-section-flex-content-h5" data-aos="fade-up">IES VE</h5>
+    </div>
+
+      <div  class="mo-tools-use-section-flex-content">
+        <div class="mo-tools-use-section-flex-contentim-div" data-aos="zoom-in-up">
+            <img class="mo-tools-use-section-flex-content-img" src="images/Energy Plus.png" alt="">
+        </div>
+
+       <h5 class="mo-tools-use-section-flex-content-h5" data-aos="fade-up">Energy Plus</h5>
+    </div>
+     <div  class="mo-tools-use-section-flex-content">
+        <div class="mo-tools-use-section-flex-contentim-div" data-aos="zoom-in-up">
+            <img class="mo-tools-use-section-flex-content-img" src="images/Design Builder.png" alt="">
+        </div>
+
+       <h5 class="mo-tools-use-section-flex-content-h5" data-aos="fade-up">Design Builder</h5>
+    </div>
+
+      <div  class="mo-tools-use-section-flex-content">
+        <div class="mo-tools-use-section-flex-contentim-div" data-aos="zoom-in-up">
+            <img class="mo-tools-use-section-flex-content-img" src="images/Ladybug Tools.png" alt="">
+        </div>
+
+       <h5 class="mo-tools-use-section-flex-content-h5" data-aos="fade-up">Ladybug Tools</h5>
+    </div>
+  <div  class="mo-tools-use-section-flex-content">
+        <div class="mo-tools-use-section-flex-contentim-div" data-aos="zoom-in-up">
+            <img class="mo-tools-use-section-flex-content-img" src="images/Modelica.png" alt="">
+        </div>
+
+       <h5 class="mo-tools-use-section-flex-content-h5" data-aos="fade-up">Modelica</h5>
+    </div>
+    </div>  
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- key benifit section
+ 
+-->
+
+
+<section class="mo-key-benifit-section" data-aos="fade-up">
+    <div class="container">
+        <h3 class="mo-key-benifit-section-h3" >Key Benefits of Building Energy Modeling</h3>
+        <p class="mo-key-benifit-section-p">Energy modeling is an investment that pays dividends throughout the lifecycle of your building</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div  class="mo-key-benifit-section-coldiv">
+<div class="mo-key-benifit-section-imdiv">
+    <img class="mo-key-benifit-section-img" src="images/Significant Cost Reduction.png" alt="">
+</div>
+
+<h5 class="mo-key-benifit-section-coldiv-h5">Significant Cost Reduction</h5>
+<p class="mo-key-benifit-section-coldiv-p">Identify opportunities to reduce predicted energy consumption, leading to lower utility bills for decades.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div  class="mo-key-benifit-section-coldiv">
+<div class="mo-key-benifit-section-imdiv">
+    <img class="mo-key-benifit-section-img" src="images/Enhanced Design Quality.png" alt="">
+</div>
+
+<h5 class="mo-key-benifit-section-coldiv-h5">Enhanced Design Quality</h5>
+<p class="mo-key-benifit-section-coldiv-p">Validate design decisions with data, ensuring you select the most efficient and cost-effective materials and systems.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div  class="mo-key-benifit-section-coldiv">
+<div class="mo-key-benifit-section-imdiv">
+    <img class="mo-key-benifit-section-img" src="images/Accelerated Permitting & Approval.png" alt="">
+</div>
+
+<h5 class="mo-key-benifit-section-coldiv-h5">Accelerated Permitting & Approval</h5>
+<p class="mo-key-benifit-section-coldiv-p">Demonstrate code compliance early, streamlining the regulatory process.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="second-mo-key-row">
+<div class="row">
+            <div class="col-md-4">
+                <div  class="mo-key-benifit-section-coldiv">
+<div class="mo-key-benifit-section-imdiv">
+    <img class="mo-key-benifit-section-img" src="images/Increased Asset Value.png" alt="">
+</div>
+
+<h5 class="mo-key-benifit-section-coldiv-h5">Increased Asset Value</h5>
+<p class="mo-key-benifit-section-coldiv-p">Certified high-performance buildings command higher rents and valuations in the market.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div  class="mo-key-benifit-section-coldiv">
+<div class="mo-key-benifit-section-imdiv">
+    <img class="mo-key-benifit-section-img" src="images/Reduced Environmental Impact.png" alt="">
+</div>
+
+<h5 class="mo-key-benifit-section-coldiv-h5">Reduced Environmental Impact</h5>
+<p class="mo-key-benifit-section-coldiv-p">Contribute to a healthier planet by lowering your building's carbon footprint.</p>
+                </div>
+            </div>
+           
+        </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- cta section-->
+ 
+ 
+  <section class="home-prefoo-section">
+    <div class="container home-prefoo-cont"  >
+      <h2 data-aos="fade-up" data-aos-once="true"  data-aos-duration="1000">Let’s Shape a <br>Low-Carbon Future Together</h2>
+      <div class="pree-foo-cta" data-aos="fade-up" data-aos-once="true"  data-aos-duration="1000">
+        <a  href="">Start Modelling</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- core energy tab section-->
+
+
+ <footer class="main-footer">
+    <div class="container">
+      <div class="row footer-row">
+        <div class="col-lg-4 col-md-6 footer-col-1">
+          <div class="footer-logo" data-aos="zoom-in-up"  data-aos-duration="1000" data-aos-once="true">
+            <img src="images/footer-logo.webp" alt="MOD B Logo">
+          </div>
+          <div class="footer-description">
+            <p  data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Dynamic energy solutions that adapt to your building's unique needs. From energy efficiency to low-carbon
+              design, we model a brighter, greener future.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-col-2">
+          <div class="footer-quick-links" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-col-3">
+          <div class="footer-location" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+            <h4>Call us</h4>
+            <p><strong>Phone:</strong><a href=""> +966 50 862 6857</a></p>
+            <h4>Get In Touch</h4>
+            <p><strong>Email:</strong><a href=""> info@modbenergy.com</a></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-col-4">
+          <div class="footer-social"  data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" >
+            <h4>Our Location</h4>
+            <div class="location-info">
+              <p>Astrolabs, Jumeirah lake towers,<br>
+                Dubai<br></p>
+              <h4>Follow us on</h4>
+              <div class="social-icons">
+                <a href="#" class="social-icon-link">
+                  <div class="social-icon-circle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#" class="social-icon-link">
+                  <div class="social-icon-circle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#" class="social-icon-link">
+                  <div class="social-icon-circle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#" class="social-icon-link">
+                  <div class="social-icon-circle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copy-right-main-div">
+        <div class="container">
+          <div class="copy-right-div">
+            <div>
+              <p   class="copy-txt">Copyright © 2025 MODB. All Rights Reserved</p>
+            </div>
+            <div class="dsn-div" >
+              <span class="dsn-txt">Web Design &amp; Development by</span>
+              <a href="https://avanexa.com/" target="_blank" class="com-name">Avanexa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </footer>
+
+  
+</body>
+</html>

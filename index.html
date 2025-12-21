@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<head>
+  <title>MODB</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/animate/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="plugins/navbar/stellarnav.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/lightbox/lightgallery.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/lightbox/lg-transitions.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/jquery-modal/jquery.modal.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/icon/bootstrap-icons.css">
+  <!-- <link rel="stylesheet" type="text/css" href="plugins/animateonscroll/aos.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="text/css" href="css/responsive.css">
+</head>
+
+<body>
+
+  <!--- aos -->
+
+   
+   
+
+  <header class="modp-main-heading animate__fadeInRight">
+    <div class="container">
+      <div class="col-lg-2">
+        <div class="logo">
+          <img  class="modp-main-heading-img" src="images/modb-logo.webp">
+        </div>
+      </div>
+    <div class="col-lg-8">
+  <nav class="modo-unique-nav">
+    <ul class="modo-unique-nav-ul">
+      <!-- Dropdown 1 -->
+      <li class="modo-unique-nav-item has-dropdown">
+        <a href="#">What We Do</a>
+        <ul class="modo-unique-dropdown">
+           <li><a href="#">Service 1</a></li>
+          <li><a href="#">Service 2</a></li>
+          <li><a href="#">Service 3</a></li>
+        </ul>
+      </li>
+
+      <!-- Dropdown 2 -->
+      <li class="modo-unique-nav-item has-dropdown">
+        <a href="#">Who We Are</a>
+        <ul class="modo-unique-dropdown">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Mission & Vision</a></li>
+        </ul>
+      </li>
+
+      <!-- Normal -->
+      <li class="modo-unique-nav-item"><a href="#">Our Projects</a></li>
+      <li class="modo-unique-nav-item"><a href="#">Case Studies</a></li>
+      <li class="modo-unique-nav-item"><a href="#">Careers</a></li>
+      <li class="modo-unique-nav-item"><a href="#">Insights</a></li>
+
+      <!-- Dropdown 3 -->
+      <li class="modo-unique-nav-item has-dropdown">
+        <a href="#">Resources</a>
+        <ul class="modo-unique-dropdown">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Whitepapers</a></li>
+          <li><a href="#">Downloads</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+      <div class="col-lg-2">
+        <a href="#" class="contact-btn">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const dropdownParents = document.querySelectorAll(".has-dropdown");
+
+  dropdownParents.forEach(item => {
+    // Show dropdown on hover
+    item.addEventListener("mouseenter", () => {
+      item.classList.add("show-dropdown");
+    });
+
+    // Hide dropdown when mouse leaves
+    item.addEventListener("mouseleave", () => {
+      item.classList.remove("show-dropdown");
+    });
+  });
+});
+</script>
+
+<!-- mobile nav-->
+<nav class="modo-mobile-nav">
+  <div class="modo-mobile-container">
+    <div class="modo-mobile-header">
+      <a href="#" class="modo-mobile-logo"><img  class="modo-mobile-logo-imm" src="images/modb-logo.webp" alt=""></a>
+
+      <!-- Unique white mobile toggle button -->
+      <div class="modo-mobile-toggle-btn" id="modoMenuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <ul class="modo-mobile-menu">
+      <!-- Dropdown 1 -->
+      <li class="modo-mobile-item has-mobile-dropdown">
+        <a href="#">What We Do</a>
+        <ul class="modo-mobile-dropdown">
+          <li><a href="#">Service 1</a></li>
+          <li><a href="#">Service 2</a></li>
+          <li><a href="#">Service 3</a></li>
+        </ul>
+      </li>
+
+      <!-- Dropdown 2 -->
+      <li class="modo-mobile-item has-mobile-dropdown">
+        <a href="#">Who We Are</a>
+        <ul class="modo-mobile-dropdown">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Mission & Vision</a></li>
+        </ul>
+      </li>
+
+      <!-- Normal Links -->
+      <li class="modo-mobile-item"><a href="#">Our Projects</a></li>
+      <li class="modo-mobile-item"><a href="#">Case Studies</a></li>
+      <li class="modo-mobile-item"><a href="#">Careers</a></li>
+      <li class="modo-mobile-item"><a href="#">Insights</a></li>
+
+      <!-- Dropdown 3 -->
+      <li class="modo-mobile-item has-mobile-dropdown">
+        <a href="#">Resources</a>
+        <ul class="modo-mobile-dropdown">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Whitepapers</a></li>
+          <li><a href="#">Downloads</a></li>
+        </ul>
+      </li>
+
+      <!-- Contact -->
+      <li><a href="#" class="modo-mobile-contact">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("modoMenuToggle");
+  const menu = document.querySelector(".modo-mobile-menu");
+  const dropdowns = document.querySelectorAll(".has-mobile-dropdown");
+
+  toggleBtn.addEventListener("click", () => {
+    toggleBtn.classList.toggle("active");
+    menu.classList.toggle("show");
+  });
+
+  dropdowns.forEach(drop => {
+    drop.addEventListener("click", function (e) {
+      e.stopPropagation();
+      this.classList.toggle("open");
+      const dropdownMenu = this.querySelector(".modo-mobile-dropdown");
+      dropdownMenu.style.display =
+        dropdownMenu.style.display === "flex" ? "none" : "flex";
+    });
+  });
+});
+</script>
+
+  <!-- <section class="hero-section">
+    <div class="row">
+      <div class="hero-section-left col-lg-6">
+        <div class="hero-left-content">
+          <h1>Where Innovation Meets Sustainability</h1>
+          <p>Dynamic energy solutions that adapt to your building's unique needs. From energy efficiency to low-carbon
+            design, we model a brighter, greener future</p>
+          <div class="hero-left-cta">
+            <a href="#">Know More</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-section-right col-lg-6">
+        <img src="images/hero-banner-img.webp">
+      </div>
+    </div>
+  </section> -->
+
+<section class="hero-section">
+    <!-- Background video -->
+    <video autoplay muted loop playsinline preload="auto" poster="images/hero-fallback.jpg">
+      <source src="images/0_Office_Building_Architecture_1920x1080.mp4" type="video/mp4">
+     
+      Your browser does not support background video.
+    </video>
+
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- LEFT -->
+        <div class="hero-section-left col-lg-6">
+          <div class="hero-left-content" data-aos="fade-up"
+     data-aos-duration="1000" data-aos-once="true">
+            <h1 class="modb-main-h1">Where Innovation Meets Sustainability</h1>
+            <p>Dynamic energy solutions that adapt to your building's unique needs. From energy efficiency to low-carbon
+              design, we model a brighter, greener future.</p>
+            <div data-aos="fade-up"
+     data-aos-duration="1000" class="hero-left-cta">
+              <a href="#">Know More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="hero-section-right col-lg-6">
+          <!-- <img src="images/hero-banner-img.webp" alt="Hero Image"> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--- new about sectiobn-->
+
+<section class="new-mo-aboutsection">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT IMAGE -->
+      <div class="col-md-6">
+        <div class="new-mo-aboutsection-left">
+       <div data-aos="zoom-in-up"  class="new-mo-aboutsection-left-imdiv" data-aos-once="true"  data-aos-duration="1000">
+           <img  class="new-mo-aboutsection-leftim" src="images/Modeling-Brighter-future.webp.webp" alt="Modern Building">
+       </div>
+          <h4 class="new-mo-about-experience">
+            20+<br><span>YEARS OF EXPERIENCE</span>
+          </h4>
+        </div>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="col-md-6">
+        <div class="new-mo-aboutsection-right"  data-aos="fade-left"
+     data-aos-duration="1000" data-aos-once="true">
+          <h6 class="new-mo-about-tag">Who We Are</h6>
+          <h2 class="new-mo-aboutsection-right-h22" >Modeling A Brighter, Greener Future</h2>
+          <p class="new-mo-aboutsection-right-ptag" >We are a multidisciplinary team of engineers, designers, and sustainability experts dedicated to creating energy-efficient, low-carbon buildings. Our approach blends science, design, and technology from energy modeling and daylight simulation to CFD analysis and retrofit strategies helping clients achieve comfort, performance, and compliance with global standards.</p>
+
+          <div class="new-mo-about-boxes">
+            <div class="new-mo-about-box" data-aos-duration="1000" data-aos="zoom-in-down" data-aos-once="true">
+          <div  class="ab-fle-icondiv">
+              <img  class="ab-fle-icondiv-img" src="images/ab1.webp" alt="">
+              <h5 class="ab-fle-icondiv-h5">Our Vision</h5>
+          </div>
+              <p class="new-mo-aboutsection-right-ptag-1">We help create sustainable, low-energy buildings using smart design and data-driven solutions.</p>
+            </div>
+            <div class="new-mo-about-box" data-aos-duration="1000" data-aos="zoom-in-down" data-aos-once="true">
+           <div class="ab-fle-icondiv">
+              <img  class="ab-fle-icondiv-img" src="images/ab2.webp" alt="">
+              <h5  class="ab-fle-icondiv-h5">Our Mission</h5>
+           </div>
+              <p class="new-mo-aboutsection-right-ptag-1">We help create sustainable, low-energy buildings using smart design and data-driven solutions.</p>
+            </div>
+          </div>
+
+          <div class="new-mo-about-cta" >
+            <a href="#" class="new-mo-about-btn">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- about no conting script -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  let counted = false;
+
+  function countExperience() {
+    const section = document.querySelector(".new-mo-aboutsection-left");
+    const counterElement = section.querySelector(".new-mo-about-experience");
+    const sectionTop = section.getBoundingClientRect().top;
+    const triggerHeight = window.innerHeight * 0.85;
+
+    if (!counted && sectionTop < triggerHeight) {
+      counted = true;
+      let start = 0;
+      const end = 20; // final number
+      const duration = 2000; // animation duration (ms)
+      const stepTime = 20; // smaller = smoother animation
+      const increment = end / (duration / stepTime);
+
+      const counter = setInterval(() => {
+        start += increment;
+        if (start >= end) {
+          start = end;
+          clearInterval(counter);
+        }
+        counterElement.innerHTML = Math.floor(start) + "+<br><span>YEARS OF EXPERIENCE</span>";
+      }, stepTime);
+
+      window.removeEventListener("scroll", countExperience);
+    }
+  }
+
+  window.addEventListener("scroll", countExperience);
+});
+</script>
+
+
+
+<!-- tailered solution section-->
+
+<section class="tailered-mo-mainsection">
+  
+
+        <div class="mog-gifaniadiv-2"> 
+        <img class="mog-gifaniadiv-gif-2" src="images/MODB-gif.gif" alt="">
+      </div>
+   
+  <div class="container">
+ <div  class="new-mo-about-tag-divv">
+  <h6  data-aos="fade-up"
+     data-aos-duration="1000" data-aos-once="true" class="new-mo-about-tag-2">What We Do</h6>
+ </div>
+    <h2  data-aos="fade-up"
+     data-aos-duration="1000" data-aos-once="true" class="tailered-mo-mainsection-h2">Tailored Solutions for Every Building</h2>
+    <div class="row gy-4">
+
+      <!-- CARD 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="tailered-mo-maincol-content"  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000" data-aos-once="true">
+          <img src="images/Energy.webp" alt="Energy Modelling">
+          <div class="tailered-mo-overlay"></div>
+          <h4 class="tailered-mo-title">Energy Modelling</h4>
+          <p class="tailered-mo-hovertext">Optimizing energy efficiency through advanced data-driven modeling.</p>
+          <div class="tailered-mo-icon"><i class="bi bi-arrow-up-right-circle"></i></div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="tailered-mo-maincol-content" data-aos="flip-right"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000" data-aos-once="true">
+          <img src="images/Daylight.webp" alt="Daylight Modelling">
+          <div class="tailered-mo-overlay"></div>
+          <h4 class="tailered-mo-title">Daylight Modelling</h4>
+          <p class="tailered-mo-hovertext">Enhancing natural light to improve energy savings and well-being.</p>
+          <div class="tailered-mo-icon"><i class="bi bi-arrow-up-right-circle"></i></div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="tailered-mo-maincol-content" data-aos="flip-right"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000" data-aos-once="true">
+          <img src="images/Computational.webp" alt="Computational Fluid Dynamics">
+          <div class="tailered-mo-overlay"></div>
+          <h4 class="tailered-mo-title">Computational Fluid Dynamics</h4>
+          <p class="tailered-mo-hovertext">Advanced airflow simulation ensuring optimal thermal comfort.</p>
+          <div class="tailered-mo-icon"><i class="bi bi-arrow-up-right-circle"></i></div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="tailered-mo-maincol-content" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000" data-aos-once="true">
+          <img src="images/Low-Energy.webp" alt="Low Energy Buildings">
+          <div class="tailered-mo-overlay"></div>
+          <h4 class="tailered-mo-title">Low Energy Buildings</h4>
+          <p class="tailered-mo-hovertext">Delivering sustainable, low-carbon design strategies for buildings.</p>
+          <div class="tailered-mo-icon"><i class="bi bi-arrow-up-right-circle"></i></div>
+        </div>
+      </div>
+
+    </div>
+
+<div class="tail-seco-rowdiv">
+ <div class="row gy-4">
+
+      <!-- CARD 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="tailered-mo-maincol-content"  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000" data-aos-once="true">
+          <img src="images/Building.webp" alt="Energy Modelling">
+          <div class="tailered-mo-overlay"></div>
+          <h4 class="tailered-mo-title">Building Retrofit Studies</h4>
+          <p class="tailered-mo-hovertext">Optimizing energy efficiency through advanced data-driven modeling.</p>
+          <div class="tailered-mo-icon"><i class="bi bi-arrow-up-right-circle"></i></div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="tailered-mo-maincol-content"  data-aos="flip-right"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000" data-aos-once="true" >
+          <img src="images/Carbon.webp" alt="Daylight Modelling">
+          <div class="tailered-mo-overlay"></div>
+          <h4 class="tailered-mo-title">Low Carbon Buildings</h4>
+          <p class="tailered-mo-hovertext">Enhancing natural light to improve energy savings and well-being.</p>
+          <div class="tailered-mo-icon"><i class="bi bi-arrow-up-right-circle"></i></div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="tailered-mo-maincol-content"  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000" data-aos-once="true">
+          <img src="images/Compliance.webp" alt="Computational Fluid Dynamics">
+          <div class="tailered-mo-overlay"></div>
+          <h4 class="tailered-mo-title">Compliance Modelling</h4>
+          <p class="tailered-mo-hovertext">Advanced airflow simulation ensuring optimal thermal comfort.</p>
+          <div class="tailered-mo-icon"><i class="bi bi-arrow-up-right-circle"></i></div>
+        </div>
+      </div>
+
+
+    </div>
+</div>
+
+  </div>
+</section>
+
+  <section class="visiple-overflo-gif-section">
+
+        <div class="mog-gifaniadiv"> 
+        <img class="mog-gifaniadiv-gif" src="images/MODB-gif.gif" alt="">
+      </div>
+    </section>
+
+
+  <section class="what-we-do-section">
+    <!-- <div class="container">
+      <p class="small-heading">What we do</p>
+      <h2 class="main-heading">Tailored Solutions for Every Building</h2>
+
+
+      <div class="what-we-do-grid row">
+        <div class="what-we-grid-indi col-lg-3 col-md-6 col-sm-12">
+          <img src="images/what-we-do-img1.webp">
+          <p>Energy Modelling</p>
+        </div>
+        <div class="what-we-grid-indi col-lg-3 col-md-6 col-sm-12">
+          <img src="images/what-we-do-img2.webp">
+          <p>Daylight Modelling</p>
+        </div>
+        <div class="what-we-grid-indi col-lg-3 col-md-6 col-sm-12">
+          <img src="images/what-we-do-img3.webp">
+          <p>Computational Fluid Dynamics</p>
+        </div>
+        <div class="what-we-grid-indi col-lg-3 col-md-6 col-sm-12">
+          <img src="images/what-we-do-img4.webp">
+          <p>Low Carbon Buildings</p>
+        </div>
+      </div>
+
+      <div class="what-we-do-grid row">
+        <div class="what-we-grid-indi col-lg-3 col-md-6 col-sm-12">
+          <img src="images/what-we-do-img5.webp">
+          <p>Low Energy Buildings</p>
+        </div>
+        <div class="what-we-grid-indi col-lg-3 col-md-6 col-sm-12">
+          <img src="images/what-we-do-img6.webp">
+          <p>Building Retrofit Studies</p>
+        </div>
+        <div class="what-we-grid-indi col-lg-3 col-md-6 col-sm-12">
+          <img src="images/what-we-do-img7.webp">
+          <p>Compliance Modelling</p>
+        </div>
+      </div>
+    </div> -->
+
+
+  
+
+    <div class="marquee-section" >
+      <div class="marquee-container">
+        <div class="marquee-content marquee-left">
+          <div class="marquee-text">
+            <span class="marquee-item">Smart Models.&nbsp;&nbsp;</span>
+            <span class="marquee-item">Sustainable Futures&nbsp;&nbsp;</span>
+            <span class="marquee-item">Smart Models.&nbsp;&nbsp;</span>
+            <span class="marquee-item">Sustainable Futures&nbsp;&nbsp;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="marquee-section">
+
+    
+      <div class="marquee-container">
+        <div class="marquee-content marquee-right">
+          <div class="marquee-text">
+            <span class="marquee-item">Transforming Blueprints into Green Performance&nbsp;&nbsp;</span>
+            <span class="marquee-item">Transforming Blueprints into Green Performance&nbsp;&nbsp;</span>
+            <span class="marquee-item">Transforming Blueprints into Green Performance&nbsp;&nbsp;</span>
+            <span class="marquee-item">Transforming Blueprints into Green Performance&nbsp;&nbsp;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee-section">
+      <div class="marquee-container">
+        <div class="marquee-content marquee-left">
+          <div class="marquee-text">
+            <span class="marquee-item">Smart Models.&nbsp;&nbsp;</span>
+            <span class="marquee-item">Sustainable Futures&nbsp;&nbsp;</span>
+            <span class="marquee-item">Smart Models.&nbsp;&nbsp;</span>
+            <span class="marquee-item">Sustainable Futures&nbsp;&nbsp;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+<!-- our expertise section-->
+<section class="mo-ourexper-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- LEFT -->
+        <div class="col-md-6">
+          <div class="mo-ourexper-section-left">
+           <h6  class="new-mo-about-tag-a">Our Skills</h6>
+            <h2 class="mo-ourexper-section-mainh2">Our Expertise</h2>
+            <p class="mo-ourexper-section-mainp"  >
+              We combine engineering precision and design innovation to deliver
+              sustainable, high-performance buildings.
+            </p>
+
+            <div class="mo-progress-item">
+              <div class="mo-progress-title">Building Performance Analysis</div>
+              <div class="mo-progress-bar">
+                <div class="mo-progress-fill" data-target="90">
+                  <span class="mo-progress-percent">0%</span>
+                  <span class="mo-progress-dot"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mo-progress-item">
+              <div class="mo-progress-title">Sustainable Design Strategy</div>
+              <div class="mo-progress-bar">
+                <div class="mo-progress-fill" data-target="95">
+                  <span class="mo-progress-percent">0%</span>
+                  <span class="mo-progress-dot"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mo-progress-item">
+              <div class="mo-progress-title">
+                Data Visualization & Simulation
+              </div>
+              <div class="mo-progress-bar">
+                <div class="mo-progress-fill" data-target="85">
+                  <span class="mo-progress-percent">0%</span>
+                  <span class="mo-progress-dot"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mo-progress-item">
+              <div class="mo-progress-title">
+                Energy Optimization & Efficiency
+              </div>
+              <div class="mo-progress-bar">
+                <div class="mo-progress-fill" data-target="90">
+                  <span class="mo-progress-percent">0%</span>
+                  <span class="mo-progress-dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="col-md-6">
+          <div class="mo-ourexper-section-right" data-aos-once="true" data-aos="fade-left"
+  
+    
+     data-aos-duration="1000">
+            <img class="mo-ourexper-section-right-imm"
+              src="images/Expertise-ana.webp"
+              alt="Building Performance Analysis"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const progressBars = document.querySelectorAll(".mo-progress-fill");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateBar(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+
+      progressBars.forEach((bar) => observer.observe(bar));
+
+      function animateBar(fill) {
+        const target = +fill.getAttribute("data-target");
+        const percent = fill.querySelector(".mo-progress-percent");
+        const dot = fill.querySelector(".mo-progress-dot");
+
+        fill.style.width = target + "%";
+
+        let current = 0;
+        const duration = 1800;
+        const stepTime = 20;
+        const totalSteps = duration / stepTime;
+        const increment = target / totalSteps;
+
+        const interval = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(interval);
+          }
+          percent.textContent = Math.round(current) + "%";
+
+          // Keep the percentage and dot at the right end of the progress bar
+          percent.style.right = "0";
+          dot.style.right = "0";
+        }, stepTime);
+      }
+    });
+  </script>
+
+  <!-- <section class="experience-section">
+    <div class="container">
+      <div class="row experience-row">
+        <div class="col-lg-6 experience-left-sec">
+          <p class="small-heading">since from 2005</p>
+          <h2 class="main-heading">Two Worlds, One Vision Sustainable Innovation</h2>
+          <p class="desc-para">MOD B seamlessly integrates advanced technology with sustainable design principles to
+            create
+            energy-efficient solutions that adapt to your needs. Like Gemini, we’re always evolving and adapting,
+            ensuring that each project receives the optimal balance of innovation and environmental responsibility</p>
+          <div class="exp-cta">
+            <a href="#">get a quote</a>
+          </div>
+        </div>
+        <div class="col-lg-5 experience-right-sec">
+          <img src="images/experience-right-img.webp" alt="">
+
+
+          <div id="home-counter">
+            <div class="home-counter-item">
+              <h1 class="home-counter-count" data-number="20+"></h1>
+              <h3 class="home-counter-text">Years of experience</h3>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <section class="home-cases-section">
+    <div class="container" >
+      <h6 class="new-mo-about-tag-c" data-aos="fade-up" data-aos-once="true"  data-aos-duration="1000"> case study</h6>
+      <h2 class="main-heading" data-aos="fade-up" data-aos-once="true"  data-aos-duration="1000">Meet with amazing cases</h2>
+    </div>
+    <div class="cases-swiper-sec" >
+      <!-- Slider main container -->
+      <div class="cases-swiper"  >
+
+        <div data-aos="fade-up" data-aos-once="true"  data-aos-duration="1000" class="swiper-button-prev"><i class="bi bi-arrow-left"></i></div>
+        <div data-aos="fade-up" data-aos-once="true"  data-aos-duration="1000" class="swiper-button-next"><i class="bi bi-arrow-right"></i></div>
+
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper" >
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="images/cases-img-1.webp">
+            <p class="cases-location">dubai, Abudhabi</p>
+            <h6 class="cases-name">Waldorf Astoria</h6>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/cases-img-2.webp">
+            <p class="cases-location">dubai, Abudhabi</p>
+            <h6 class="cases-name">County Museum</h6>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/cases-img-1.webp">
+            <p class="cases-location">dubai, Abudhabi</p>
+            <h6 class="cases-name">Waldorf Astoria</h6>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <!--marque logo section-->
+  <section class="modp-brandlogo-section" data-aos="fade-up" data-aos-once="true"  data-aos-duration="1000">
+    <div class="brand-section-marq-modp">
+      <div class="container">
+
+        <div class="brand-track-container">
+          <div class="d-flex brand-marquee-lo">
+            <!-- First set of logos -->
+            <div class="brand-logo-wrapper"><img src="images/applied.webp" class="brand-logo" alt="Brand 1"></div>
+            <div class="brand-logo-wrapper"><img src="images/ansyslst.webp" class="brand-logo" alt="Brand 2"></div>
+            <div class="brand-logo-wrapper"><img src="images/siemens.webp" class="brand-logo" alt="Brand 3"></div>
+            <div class="brand-logo-wrapper"><img src="images/tepe.webp" class="brand-logo" alt="Brand 4"></div>
+            <div class="brand-logo-wrapper"><img src="images/intertek.webp" class="brand-logo" alt="Brand 5"></div>
+            <div class="brand-logo-wrapper"><img src="images/siemens.webp" class="brand-logo" alt="Brand 6"></div>
+
+            <!-- Duplicate for seamless loop -->
+            <div class="brand-logo-wrapper"><img src="images/applied.webp" class="brand-logo" alt="Brand 1"></div>
+            <div class="brand-logo-wrapper"><img src="images/ansyslst.webp" class="brand-logo" alt="Brand 2"></div>
+            <div class="brand-logo-wrapper"><img src="images/siemens.webp" class="brand-logo" alt="Brand 3"></div>
+            <div class="brand-logo-wrapper"><img src="images/tepe.webp" class="brand-logo" alt="Brand 4"></div>
+            <div class="brand-logo-wrapper"><img src="images/intertek.webp" class="brand-logo" alt="Brand 5"></div>
+            <div class="brand-logo-wrapper"><img src="images/applied.webp" class="brand-logo" alt="Brand 6"></div>
+            <div class="brand-logo-wrapper"><img src="images/siemens.webp" class="brand-logo" alt="Brand 6"></div>
+
+
+            <div class="brand-logo-wrapper"><img src="images/ansyslst.webp" class="brand-logo" alt="Brand 1"></div>
+            <div class="brand-logo-wrapper"><img src="images/siemens.webp" class="brand-logo" alt="Brand 2"></div>
+            <div class="brand-logo-wrapper"><img src="images/tepe.webp" class="brand-logo" alt="Brand 3"></div>
+            <div class="brand-logo-wrapper"><img src="images/intertek.webp" class="brand-logo" alt="Brand 4"></div>
+            <div class="brand-logo-wrapper"><img src="images/applied.webp" class="brand-logo" alt="Brand 5"></div>
+            <div class="brand-logo-wrapper"><img src="images/ansyslst.webp" class="brand-logo" alt="Brand 6"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- testi section-->
+
+  <!-- ======== Testimonial Section Start ======== -->
+  <section class="modp-testi-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Side -->
+        <div class="col-md-3 mb-4 mb-md-0">
+          <p class="modp-testi-h2-top-hea" data-aos="fade-right" data-aos-once="true"  data-aos-duration="1000">TESTIMONIALS</p>
+          <h2  data-aos="fade-right" data-aos-once="true"  data-aos-duration="1000" class="modp-testi-h2">Proven Trust.<br />Happy Clients</h2>
+        </div>
+
+        <!-- Right Side (Swiper) -->
+        <div class="col-md-9">
+          <div class="swiper modp-testi-swiper"  data-aos="fade-left" data-aos-once="true"  data-aos-duration="1000">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="testi-card">
+                  <p class="modp-testi-p">
+                    The energy modelling insights from MOD B completely
+                    transformed our project. We were able to cut down energy
+                    consumption by nearly 30% while improving comfort for
+                    occupants.
+                  </p>
+                  <div class="client-info">
+                    <img src="images/tes.webp" class="rounded-circle" alt="Client" width="50" height="50" />
+                    <div class="">
+                      <p class="modp-last-testi-gree-p">
+                        ARCHI DESIGN
+                      </p>
+                      <p class="modp-last-testi">Anita Sharma</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="testi-card">
+                  <p class="modp-testi-p">
+                    The energy modelling insights from MOD B completely
+                    transformed our project. We were able to cut down energy
+                    consumption by nearly 30% while improving comfort for
+                    occupants.
+                  </p>
+                  <div class="client-info">
+                    <img src="images/tes.webp" class="rounded-circle" alt="Client" width="50" height="50" />
+                    <div class="">
+                      <p class="modp-last-testi-gree-p">
+                        ARCHI DESIGN
+                      </p>
+                      <p class="modp-last-testi">Rohit Verma</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="testi-card">
+                  <p class="modp-testi-p">
+                    The energy modelling insights from MOD B completely
+                    transformed our project. We were able to cut down energy
+                    consumption by nearly 30% while improving comfort for
+                    occupants.
+                  </p>
+                  <div class="client-info">
+                    <img src="images/tes.webp" class="rounded-circle" alt="Client" width="50" height="50" />
+                    <div class="">
+                      <p class="modp-last-testi-gree-p">
+                        ECO TECH
+                      </p>
+                      <p class="modp-last-testi">Meera Patel</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                <div class="testi-card">
+                  <p class="modp-testi-p">
+                    The energy modelling insights from MOD B completely
+                    transformed our project. We were able to cut down energy
+                    consumption by nearly 30% while improving comfort for
+                    occupants.
+                  </p>
+                  <div class="client-info">
+                    <img src="images/tes.webp" class="rounded-circle" alt="Client" width="50" height="50" />
+                    <div class="">
+                      <p class="text-success small fw-semibold mb-1">
+                        BUILD SMART
+                      </p>
+                      <p class="modp-last-testi">Kiran Rao</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination + Navigation 
+              <div class="swiper-pagination mt-3"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="home-prefoo-section">
+    <div class="container home-prefoo-cont"  >
+      <h2 data-aos="fade-up" data-aos-once="true"  data-aos-duration="1000">Let’s Shape a <br>Low-Carbon Future Together</h2>
+      <div class="pree-foo-cta" data-aos="fade-up" data-aos-once="true"  data-aos-duration="1000">
+        <a  href="">Start Modelling</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row footer-row">
+        <div class="col-lg-4 col-md-6 footer-col-1">
+          <div class="footer-logo" data-aos="zoom-in-up"  data-aos-duration="1000" data-aos-once="true">
+            <img src="images/footer-logo.webp" alt="MOD B Logo">
+          </div>
+          <div class="footer-description">
+            <p  data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Dynamic energy solutions that adapt to your building's unique needs. From energy efficiency to low-carbon
+              design, we model a brighter, greener future.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-col-2">
+          <div class="footer-quick-links" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-col-3">
+          <div class="footer-location" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+            <h4>Call us</h4>
+            <p><strong>Phone:</strong><a href=""> +966 50 862 6857</a></p>
+            <h4>Get In Touch</h4>
+            <p><strong>Email:</strong><a href=""> info@modbenergy.com</a></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-col-4">
+          <div class="footer-social"  data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" >
+            <h4>Our Location</h4>
+            <div class="location-info">
+              <p>Astrolabs, Jumeirah lake towers,<br>
+                Dubai<br></p>
+              <h4>Follow us on</h4>
+              <div class="social-icons">
+                <a href="#" class="social-icon-link">
+                  <div class="social-icon-circle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#" class="social-icon-link">
+                  <div class="social-icon-circle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#" class="social-icon-link">
+                  <div class="social-icon-circle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#" class="social-icon-link">
+                  <div class="social-icon-circle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copy-right-main-div">
+        <div class="container">
+          <div class="copy-right-div">
+            <div>
+              <p   class="copy-txt">Copyright © 2025 MODB. All Rights Reserved</p>
+            </div>
+            <div class="dsn-div" >
+              <span class="dsn-txt">Web Design &amp; Development by</span>
+              <a href="https://avanexa.com/" target="_blank" class="com-name">Avanexa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery-migrate-3.4.0.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="plugins/jquery-ui/jquery-ui.js"></script>
+  <script type="text/javascript" src="plugins/slick/slick.min.js"></script>
+  <script type="text/javascript" src="plugins/navbar/stellarnav.min.js"></script>
+  <script type="text/javascript" src="plugins/lightbox/lightgallery-all.min.js"></script>
+  <script type="text/javascript" src="plugins/jquery-modal/jquery.modal.min.js"></script>
+  <script type="text/javascript" src="plugins/animateonscroll/aos.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#lightgallery').lightGallery({
+        download: false,
+        share: false,
+        rotate: false,
+        autoplayControls: false
+      });
+
+    });
+  </script>
+
+  <script>
+    AOS.init();
+  </script>
+
+
+  <!-- FaQ Script -->
+  <script>
+    $(document).ready(function () {
+      const openId = localStorage.getItem("openFaqId");
+      if (openId) {
+        const $item = $(`.faq-item[data-id="${openId}"]`);
+        $item.addClass("active");
+        $item.find(".faq-answer").slideDown();
+      }
+      $(".faq-question").on("click", function () {
+        const $item = $(this).closest(".faq-item");
+        $(".faq-item").not($item).removeClass("active").find(".faq-answer").slideUp();
+        $item.toggleClass("active");
+        $item.find(".faq-answer").slideToggle();
+        if ($item.hasClass("active")) {
+          localStorage.setItem("openFaqId", $item.data("id"));
+
+        } else {
+          localStorage.removeItem("openFaqId");
+        }
+      });
+    });
+  </script>
+
+
+  <script>
+    const swiper = new Swiper('.cases-swiper', {
+      // Default parameters
+      slidesPerView: 2.5,
+      spaceBetween: 10,
+      autoplay: {
+        delay: 3000,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      direction: "horizontal",
+      loop: true,
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        },
+
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 15
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        1024: {
+          slidesPerView: 2.5,
+          spaceBetween: 20
+        },
+        1140: {
+          slidesPerView: 2.5,
+          spaceBetween: 20
+        },
+      }
+    })
+  </script>
+
+
+  <script>
+    function startCounter(element) {
+      let targetText = element.dataset.number.trim();
+
+      let numberMatch = targetText.match(/\d+/);
+      let symbol = targetText.replace(/[0-9]/g, "");
+
+      if (!numberMatch) return;
+      let target = parseInt(numberMatch[0]);
+      let count = 0;
+
+      let interval = setInterval(() => {
+        count++;
+        element.textContent = count + symbol;
+        if (count >= target) {
+          clearInterval(interval);
+          element.textContent = target + symbol;
+        }
+      }, 80);
+    }
+
+    const counters = document.querySelectorAll(".home-counter-count");
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 1 }
+    );
+
+    counters.forEach(counter => observer.observe(counter));
+  </script>
+
+
+  <script>
+    // Swiper Initialization
+    var testiswiper = new Swiper(".modp-testi-swiper", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        1140: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+      },
+    });
+  </script>
+
+
+
+</body>
+
+</html>

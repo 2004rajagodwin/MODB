@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Home - SVPISTM</title>
+    
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/vendors/svpt-icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendors/twentytwenty/twentytwenty.css" />
+    <link rel="stylesheet" href="assets/vendors/bxslider/css/jquery.bxslider.css" />
+
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/svpt.css" />
+    <link rel="stylesheet" href="assets/css/svpt-responsive.css" />
+    
+    <style>
+        .action-box {
+            box-shadow: rgba(0, 0, 0, 0.05) 5px 5px 40px 0px;
+            height: 100%;
+            background: rgb(255, 255, 255);
+            border-radius: 4px;
+        }
+    
+        .action-box .head {
+            color: rgb(255, 255, 255);
+            background: #177f7e;
+            padding: 15px 20px;
+            border-radius: 4px 4px 0px 0px;
+        }
+    
+        .action-box .head {
+            color: rgb(255, 255, 255);
+            background: #177f7e;
+            padding: 15px 20px;
+            border-radius: 4px 4px 0px 0px;
+        }
+    
+        .action-area.marquee ul,
+        .action-area.marquee1 ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+    
+        .action-area.marquee ul li,
+        .action-area.marquee1 ul li {
+            margin-bottom: 10px;
+        }
+    
+        .action-area.marquee ul li a {
+            display: block;
+            color: rgb(0, 0, 0);
+            line-height: 30px;
+            font-size: 18px;
+            position: relative;
+            padding: 4px 0px 0px 30px;
+            text-decoration: underline;
+        }
+    
+        .action-area.marquee1 ul li a {
+            display: block;
+            color: rgb(0, 0, 0);
+            line-height: 30px;
+            font-size: 14px;
+            position: relative;
+            padding: 4px 0px 0px 30px;
+            text-decoration: underline;
+        }
+    
+        .fa-bell {
+            color: #177f7e;
+            position: absolute;
+            left: 0px;
+            font-size: 20px;
+            top: 5px;
+        }
+    
+        .action-box .action-area {
+            padding: 20px;
+        }
+    
+        .marquee1 {
+            height: 320px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+    
+        .event-bx {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+    
+        .event-bx li {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    
+        .event-bx li a {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 28px;
+            color: rgb(102, 102, 102);
+            display: block;
+            font-family: Roboto;
+            position: relative;
+            padding: 0px 0px 0px 40px;
+        }
+    
+        .fa-bullhorn {
+            color: #177f7e;
+            position: absolute;
+            left: -10px;
+            top: 6px;
+            font-size: 28px;
+        }
+    
+        .blog-artical {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+    
+        .blog-artical li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            min-height: 80px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    
+        .blog-artical li a {
+            display: block;
+            position: relative;
+            padding: 5px 10px 5px 70px;
+        }
+    
+        .blog-artical li a .date {
+            position: absolute;
+            left: 0px;
+            width: 60px;
+            text-align: center;
+            top: 0px;
+            background: rgb(238, 238, 238);
+            border-radius: 4px;
+            padding: 5px 0px;
+        }
+    
+        .blog-artical li a .date span {
+            font-family: Roboto;
+            display: block;
+            font-size: 35px;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+            line-height: 35px;
+        }
+    
+        .blog-artical li a .date strong {
+            display: block;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: rgb(0, 0, 0);
+            font-family: Roboto;
+            font-size: 14px;
+            letter-spacing: 2px;
+            opacity: 0.7;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 3px 0px 0px;
+        }
+    
+        .blog-artical li a .title {
+            font-family: Roboto;
+            font-weight: 600;
+            line-height: 30px;
+            color: rgb(68, 68, 68);
+            font-size: 18px;
+            margin-bottom: 0px;
+        }
+    
+        .marquee-head.action-area ul li,
+        .marquee-head.action-area.marquee ul li {
+            display: inline-block;
+            margin: 0 20px 0 0;
+        }
+    </style>
+ 
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KD8S432P');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google tag (gtag.js) --> 
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8HRET1W8M"></script>
+  <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'G-D8HRET1W8M'); </script>
+
+</head>
+
+<body>
+
+      <!-- Google Tag Manager (noscript) -->
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD8S432P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- <div class="preloader">
+        <img class="preloader__image" width="140" src="assets/images/loader.png" alt="" />
+    </div> -->
+    <?php include 'menu.php';?>
+
+    <div class="stricky-header stricked-menu main-menu">
+        <div class="sticky-header__content"></div>
+        <!-- /.sticky-header__content -->
+    </div>
+    <!-- /.stricky-header -->
+
+
+   <section class="main-slider">
+  <div class="swiper-container thm-swiper__slider" data-swiper-options='{
+      "slidesPerView": 1,
+      "loop": true,
+      "effect": "slide",
+      "pagination": {
+        "el": "#main-slider-pagination",
+        "type": "bullets",
+        "clickable": true
+      },
+      "navigation": {
+        "nextEl": "#main-slider__swiper-button-next",
+        "prevEl": "#main-slider__swiper-button-prev"
+      },
+      "autoplay": {
+        "delay": 6000
+      }
+    }'>
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="image-layer" style="background-image: url('images/slider0.jpg');"></div>
+        <div class="main-slider-shape-1"></div>
+        <div class="main-slider-shape-2"></div>
+        <div class="main-slider-shape-3"></div>
+        <div class="main-slider-shape-4"></div>
+        <div class="main-slider-shape-5"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="image-layer" style="background-image: url('images/slider250303.jpg');"></div>
+        <div class="main-slider-shape-1"></div>
+        <div class="main-slider-shape-2"></div>
+        <div class="main-slider-shape-3"></div>
+        <div class="main-slider-shape-4"></div>
+        <div class="main-slider-shape-5"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="image-layer" style="background-image: url('images/slider1.jpg');"></div>
+        <div class="main-slider-shape-1"></div>
+        <div class="main-slider-shape-2"></div>
+        <div class="main-slider-shape-3"></div>
+        <div class="main-slider-shape-4"></div>
+        <div class="main-slider-shape-5"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="main-slider__content">
+                <p>Welcome to Sardar Vallabhbhai Patel</p>
+                <h2>International School of Textiles and Management</h2>
+                <p>सरदार वल्लभभाई पटेल इंटरनेशनल स्कूल ऑफ टेक्सटाइल एंड मैनेजमेंट में आपका स्वागत है</p>
+                <h4>
+                  <a style="color:white" href="images/documents/PROSPECTUS 2025-26.pdf" target="_blank">
+                    ADMISSIONS OPEN FOR THE ACADEMIC YEAR 2025-26
+                  </a>
+                </h4>
+                <h4 style="color:#fff">
+                  SVPISTM Ranked First in Coimbatore, Second in Tamil Nadu & Seventh in South India GOVT. B-School
+                  Excellence by India Today 2024
+                </h4>
+                <a href="about-us.php" class="thm-btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="image-layer" style="background-image: url('images/slider2.jpg');"></div>
+        <div class="main-slider-shape-1"></div>
+        <div class="main-slider-shape-2"></div>
+        <div class="main-slider-shape-3"></div>
+        <div class="main-slider-shape-4"></div>
+        <div class="main-slider-shape-5"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="main-slider__content">
+                <p>Welcome to Sardar Vallabhbhai Patel</p>
+                <h2>International School of Textiles and Management</h2>
+                <p>सरदार वल्लभभाई पटेल इंटरनेशनल स्कूल ऑफ टेक्सटाइल एंड मैनेजमेंट में आपक</p>
+                <a href="about-us.php" class="thm-btn">Learn More</a>
+                <h3 style="color:white">
+                  <a style="color:white" href="images/documents/PROSPECTUS 2025-26.pdf" target="_blank">
+                    ADMISSIONS OPEN FOR THE ACADEMIC YEAR 2025-26
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="image-layer" style="background-image: url('images/sliders.jpg');"></div>
+        <div class="main-slider-shape-1"></div>
+        <div class="main-slider-shape-2"></div>
+        <div class="main-slider-shape-3"></div>
+        <div class="main-slider-shape-4"></div>
+        <div class="main-slider-shape-5"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="main-slider__content">
+                <p>Welcome to Sardar Vallabhbhai Patel</p>
+                <h2>International School of Textiles and Management</h2>
+                <p>सरदार वल्लभभाई पटेल इंटरनेशनल स्कूल ऑफ टेक्सटाइल एंड मैनेजमेंट में आपक</p>
+                <a href="about-us.php" class="thm-btn">Learn More</a>
+                <h3 style="color:white">
+                  <a style="color:white" href="images/documents/PROSPECTUS 2025-26.pdf" target="_blank">
+                    ADMISSIONS OPEN FOR THE ACADEMIC YEAR 2025-26
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="image-layer" style="background-image: url('images/slider.jpg');"></div>
+        <div class="main-slider-shape-1"></div>
+        <div class="main-slider-shape-2"></div>
+        <div class="main-slider-shape-3"></div>
+        <div class="main-slider-shape-4"></div>
+        <div class="main-slider-shape-5"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="main-slider__content">
+                <p>Welcome to Sardar Vallabhbhai Patel</p>
+                <h2>International School of Textiles and Management</h2>
+                <p>सरदार वल्लभभाई पटेल इंटरनेशनल स्कूल ऑफ टेक्सटाइल एंड मैनेजमेंट में आपक</p>
+                <a href="about-us.php" class="thm-btn">Learn More</a>
+                <h3 style="color:white">
+                  <a style="color:white" href="images/documents/PROSPECTUS 2025-26.pdf" target="_blank">
+                    ADMISSIONS OPEN FOR THE ACADEMIC YEAR 2025-26
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="main-slider__nav">
+    <div class="swiper-button-prev" id="main-slider__swiper-button-next">
+      <span class="main-slider__next-text">Next</span><i class="icon-right-arrow icon-left-arrow"></i>
+    </div>
+    <div class="swiper-button-next" id="main-slider__swiper-button-prev">
+      <span class="main-slider__prev-text">Prev</span><i class="icon-right-arrow"></i>
+    </div>
+  </div>
+</section>
+
+<!-- Announcements -->
+<section class="real-world anos" style="padding-top:60px">
+  <div class="real-world-shape wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms"
+    style="background-image: url('assets/images/shapes/real-world-shape.png')"></div>
+  <div class="container">
+    <div class="section-title text-center">
+      <h2 class="section-title__title">Announcements घोषणाएं</h2>
+    </div>
+    <div class="row" id="newss">
+      <div class="col-lg-12">
+        <div class="action-area marquee-head marquee">
+          <marquee direction="left" scrollamount="6" onMouseOver="this.stop();" onMouseOut="this.start();" style="padding:20px;">
+            <ul>
+              <li><a href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i> Sample Announcement 1</a></li>
+              <li><a href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i> Sample Announcement 2</a></li>
+              <li><a href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i> Sample Announcement 3</a></li>
+            </ul>
+          </marquee>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- News & Events -->
+<section class="real-world" style="padding-top:0px">
+  <div class="real-world-shape wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms"
+    style="background-image: url('assets/images/shapes/real-world-shape.png')"></div>
+  <div class="container-fluid">
+    <div class="section-title text-center">
+      <h2 class="section-title__title">News & Events समाचार और कार्यक्रम</h2>
+      <span class="section-title__tagline">Our Latest News & Events</span>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="action-box text-center">
+          <div class="head">
+            <h4 class="title" style="color:#fff">UPCOMING NEWS आगामी समाचार</h4>
+          </div>
+          <div class="action-area marquee1" style="text-align:left">
+            <marquee direction="up" scrollamount="3" onMouseOver="this.stop();" onMouseOut="this.start();" style="padding:20px; height:270px;">
+              <ul>
+                <li><a href="#"><i class="fa fa-bullhorn"></i> Upcoming Event 1</a></li>
+                <li><a href="#"><i class="fa fa-bullhorn"></i> Upcoming Event 2</a></li>
+              </ul>
+            </marquee>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="action-box text-center">
+          <div class="head">
+            <h4 class="title" style="color:#fff">LATEST NEWS ताजा खबर</h4>
+          </div>
+          <div class="action-area marquee1" style="text-align:left">
+            <marquee direction="up" scrollamount="3" onMouseOver="this.stop();" onMouseOut="this.start();" style="padding:20px; height:270px;">
+              <ul>
+                <li><a href="#"><i class="fa fa-bullhorn"></i> Latest News 1</a></li>
+                <li><a href="#"><i class="fa fa-bullhorn"></i> Latest News 2</a></li>
+              </ul>
+            </marquee>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="action-box">
+          <div class="head">
+            <h4 class="title" style="color:#fff">TENDERS निविदाओं</h4>
+          </div>
+          <div class="action-area marquee1">
+            <marquee direction="up" scrollamount="3" onMouseOver="this.stop();" onMouseOut="this.start();" style="padding:20px; height:270px;">
+              <ul>
+                <li><a href="#"><i class="fa fa-bullhorn"></i> Tender Notice 1</a></li>
+                <li><a href="#"><i class="fa fa-bullhorn"></i> Tender Notice 2</a></li>
+              </ul>
+            </marquee>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="action-box">
+          <div class="head">
+            <h4 class="title" style="color:#fff">MAGAZINE पत्रिकाा</h4>
+          </div>
+          <div class="action-area marquee1">
+            <marquee direction="up" scrollamount="3" onMouseOver="this.stop();" onMouseOut="this.start();" style="padding:20px; height:270px;">
+              <ul>
+                <li><a href="#"><i class="fa fa-bullhorn"></i> Magazine Edition 1</a></li>
+                <li><a href="#"><i class="fa fa-bullhorn"></i> Magazine Edition 2</a></li>
+              </ul>
+            </marquee>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!--Site Footer One End-->
+
+
+    <section class="welcome-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="welcome-one__left">
+                        <div class="welcome-one__img-box">
+                            <div class="welcome-one__img-1">
+                                <img src="images/welcome-1-img-1.jpg" alt="">
+                            </div>
+                            <div class="welcome-one__img-2">
+                                <img src="images/welcome-1-img-2.jpg" alt="">
+                            </div>
+                            <!-- <a href="#"
+                                    class="welcome-one__video-btn video-popup">
+                                    <div class="welcome-one__video-btn-icon">
+                                        <i class="fa fa-play"></i>
+                                        <span class="ripple"></span>
+                                    </div>
+                                </a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="welcome-one__right">
+                        <h2 class="welcome-one__title">Welcome to Sardar Vallabhbhai Patel International School of
+                            Textiles & Management</h2>
+                        <p class="welcome-one__text">Sardar Vallabhbhai Patel International School of Textiles &amp;
+                            Management,
+                            Coimbatore is a National Level Institution providing comprehensive Education,
+                            Training, Consultancy and Research in Textile Management. SVPISTM is a
+                            unique institute under the Ministry of Textiles offering
+                            courses including MBA approved by AICTE</p>
+                        <p class="welcome-one__text-two"> The Institute was set up by the Government of India –Ministry
+                            of Textiles as aRegistered Society, under the Tamil Nadu Societies Registration Act, 1975, videorder of Textile Ministry No.18011/20/2002-NTC dated 3.12.2002 in the premisesof the erstwhile NTC Staff College, Coimbatore</p><div class="welcome-one__call">
+                            <div class="welcome-one__call-icon">
+                                <span class="icon-phone-ringing"></span>
+                            </div>
+                            <div class="welcome-one__call-text">
+                                <p>Have any question? Give us a call</p>
+                                <a href="tel:+91-88704 79675">+91-88704 79675</a>
+                            </div>
+                        </div>
+                        <div class="welcome-one__big-text">SVPISTM</div>
+                    </div>
+                </div>
+            </div>
+        </div></section>
+    <section class="cases-two">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2 class="section-title__title">Courses पाठ्यक्रम</h2>
+                <span class="section-title__tagline">We have the best courses available</span>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 wow fadeInUp animated" data-wow-delay="0ms" data-wow-duration="1500ms"
+                    style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                    <!--Cases Two Sinlge-->
+                    <a href="school-of-management.php">
+                        <div class="cases-two__single">
+                            <div class="casees-two__img-box">
+                                <div class="cases-two__img">
+                                    <img src="images/mba.jpg" alt="Master of Business Administration">
+                                </div>
+                                <div class="cases-two__content">
+                                    <div class="cases-two__icon-box-details">
+                                        <div class="cases-two__icon">
+                                            <span class="icon-creative"></span>
+                                        </div>
+                                        <p class="cases-two__tagline"></p>
+                                        <h4 class="cases-two__tilte" style="text-transform: initial; font-size: 24px;">
+                                            <ol>
+                                                <li>MBA Textile Management</li>
+                                                <li>MBA Apparel Management</li>
+                                                <li>MBA Retail Management</li>
+                                                <li>MBA Technical Textile Management</li>
+                                                <li>MBA Textile Business Analytics</li>
+                                                <li>M.Sc.Textile & Apparel Science*</li>
+
+                                            </ol>
+                                        </h4>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-6 col-lg-6 wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms"
+                    style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                    <!--Cases Two Sinlge-->
+                    <a href="school-of-textile.php">
+                        <div class="cases-two__single">
+                            <div class="casees-two__img-box">
+                                <div class="cases-two__img">
+                                    <img src="images/textiles.jpg" alt="B.Sc Textile">
+                                </div>
+                                <div class="cases-two__content">
+                                    <div class="cases-two__icon-box-details">
+                                        <div class="cases-two__icon">
+                                            <span class="icon-creative"></span>
+                                        </div>
+                                        <p class="cases-two__tagline"></p>
+                                        <h4 class="cases-two__tilte" style="text-transform: initial; font-size: 24px;">
+                                            <ol>
+                                                <li>B.Sc. Textiles</li>
+                                                <li>B.Sc. Technical Textiles</li>
+                                                <li>B.Sc. Textile & Apparel Design</li>
+                                                <li>BBA Textile Business Analytics</li>
+                                            </ol>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-one team-page" style="padding-top:60px">
+        <div class="team-one__container">
+            <div class="section-title text-center">
+                <h2 class="section-title__title">Key Persons प्रमुख व्यक्ति</h2>
+                <span class="section-title__tagline">Key Person</span>
+            </div>
+            
+            <div class="row"> 
+                <div class="col-xl-2 col-lg-2"> 
+                </div> 
+                <div class="col-xl-2 col-lg-4"> 
+                    <div class="about__img-box"> 
+                        <div class="about-img teamimg" id="keyper"> 
+                            <img src="images/team/Shri_Giriraj_Singh.jpg" alt=""> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="col-xl-6 col-lg-4"> 
+                    <div class="about__right"> 
+                        <h2 class="about__title" style="font-size:30px">SHRI. GIRIRAJ SINGH</h2>  
+                        <div class="about__icon-box" style="margin-top:4px; margin-bottom:15px"> 
+                            <div class="about__icon-text" style="margin-left:0px"> 
+                                <h4>Minister of Textiles</h4> 
+                            </div> 
+                        </div> 
+                   <!--     <div class="site-footer__social" style="margin-bottom:35px"> 
+                            <a href="https://twitter.com/PiyushGoyal" target="_blank"><i class="fab fa-twitter"></i></a> 
+                            <a href="https://www.facebook.com/PiyushGoyalOfficial/" target="_blank" class="clr-fb"><i
+                                    class="fab fa-facebook"></i></a> 
+                            <a href="#" class="clr-ins"><i class="fab fa-instagram"></i></a> 
+                        </div> -->
+                        <p class="about__right-text" style="padding-bottom: 9px; text-align:justify">I am happy to learn
+                            that the
+                            Sardar Vallabhbhai Patel
+                            International School of Textiles and Management (SVPISTM) which has been set up with a
+                            view to provide Education, Research and Consultancy for development of the Indian
+                            Textile Industry, and making it globally competitive, has taken rapid strides recently
+                            for serving its primary purpose. The Union Government under the dynamic leadership of
+                            Hon’ble Prime Minister Shri Narendra Modi , has laid stress on “Skill, Scale and Speed”
+                            and production with “zero defect and zero effect” for production, export and generation
+                            of employment on large scale for achieving the objective of “Sabka Saath Sabka Vikas”.
+                        </p> 
+                    </div></div> 
+                <div class="col-xl-2 col-lg-2"> 
+                </div> 
+             </div> 
+             <div class="row" style='margin-top:50px;margin-bottom:20px;'> 
+                <div class="col-xl-2 col-lg-2"></div> 
+                <div class="col-xl-2 col-lg-4"> 
+                    <divclass="about__img-box"><div class="about-img teamimg" id="keyper"><img src="images/team/Pabitra Margherita.jpg" alt=""></div> 
+                    </div> 
+                    <div class="col-xl-6 col-lg-4"> 
+                        <div class="about__right">  
+                            <h2 class="about__title" style="font-size:30px">SHRI. PABITRA MARGHERITA</h2> 
+                            <div class="about__icon-box" style="margin-top:4px; margin-bottom:15px"> 
+                                <div class="about__icon-text" style="margin-left:0px"> 
+                                    <h4>Minister of State for Textiles</h4> 
+                                </div> 
+                            </div> 
+                           <!-- <div class="site-footer__social" style="margin-bottom:35px"> 
+                                <a href="https://twitter.com/DarshanaJardosh?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" 
+                                    target="_blank"><i class="fab fa-twitter"></i></a> 
+                                <a href="https://www.facebook.com/darshanajardosh" target="_blank" class="clr-fb"><i
+                                        class="fab fa-facebook"></i></a> 
+                                <a href="https://www.instagram.com/darshanajardosh/?hl=en" class="clr-ins"><i
+                                        class="fab fa-instagram"></i></a> 
+                            </div> -->
+                            <p class="about__right-text" style="padding-bottom: 9px; text-align:justify">I am delighted to
+                                know that Sardar Vallabhbhai Patel International School of Textiles and Management
+                                (SVPISTM), Coimbatore is an autonomous Institute set up in the year 2002 under Ministry of
+                                Textiles, Government of India with an objective of professionalizing the Indian Textile
+                                Industry by creating competent managers as well as researchers who will be manning various
+                                facets of Textiles Industry. 
+                                It is gratifying that the Institute is helping the Textile Industry in the realization of
+                                its objectives by consistently offering academic programmes, Industry related consultancy
+                                work, research studies etc., The Institute is helping students to get wide and varied
+                                exposure to the challenges before the Textile Industry and imbibing them with skill sets
+                                required to take the textile sector to a new trajectory. 
+                                I greet all the students and faculty and wish the Institution all success in its endeavors
+    
+                            </p> 
+                        </div> 
+                    </div> 
+                    <div class="col-xl-2 col-lg-2"> 
+                    </div> 
+                </div> 
+             </div> 
+
+             <div class="row" style="padding-top:30px"> 
+                <div class="col-xl-2 col-lg-2"> 
+                </div> 
+                <div class="col-xl-2 col-lg-4" id="mobileimg"> 
+                    <div class="about__img-box"> 
+                        <div class="about-img teamimg" id="keyper2"> 
+                            <img src="images/team/Neelam_shami_Rao.jpg" alt=""> 
+                        </div> 
+                    </div> 
+                </div> 
+
+                <div class="col-xl-6 col-lg-4"> 
+                    <div class="about__right"> 
+                        <h2 class="about__title" style="font-size:30px">SMT. NEELAM SHAMI RAO</h2> 
+                        <div class="about__icon-box" style="margin-top:4px; margin-bottom:15px"> 
+                            <div class="about__icon-text" style="margin-left:0px"> 
+                                <h4>Secretary-MOT, Govt. of India</h4> 
+                            </div> 
+                        </div> 
+                        <!-- <div class="site-footer__social" style="margin-bottom:35px"> 
+                            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a> 
+                        </div> --> 
+                        <p style="text-align:justify">The Sardar Vallabhbhai patel International school of Textiles and
+                            Management (SVPISTM) has been established to groom professionals in the
+                            sphere of textile education, research, consultancy etc. giving special attention to
+                            making the Indian textile industry globally competitive. I am delighted to note that
+                            the institute is helping the textile industry in the realization of its objectives by
+                            consistently churning out professionals through its specialized undergraduate
+                            and postgraduate programmes. 
+                        </p> 
+                        <p style="text-align:justify"> The institute is unique in its endeavour and has emerged as a
+                            centre of
+                            excellence by creating textile professionals for management of the lndian textiles
+                            sector and for nurturing future leaders of Technology and Management covering
+                            the entire textile value chain to serve both domestic and global needs of the
+                            sector.</p> 
+                        <p style="text-align:justify">I am happy to know that the Institute has received accreditation
+                            from All
+                            lndia council for Technical Education (AICTE) and National Assessment and
+                            Accreditation Council (NAAC).</p> 
+                        <p style="text-align:justify">I wish the students and faculty of SVPISTM success in their
+                            endeavours. 
+
+                        </p> 
+                    </div> 
+                </div> 
+                <div class="col-xl-2 col-lg-4" id="desktopimg"> 
+                    <div class="about__img-box"> 
+                        <div class="about-img teamimg"> 
+                            <img src="images/team/Neelam_shami_Rao.jpg" alt=""> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="col-xl-2 col-lg-2"> 
+                </div> 
+             </div> 
+           </div>
+        <div class="container" style="padding-top:100px">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-2"></div>
+
+                <div class="col-xl-2 col-lg-4 col-md-4 col-6 wow fadeInUp animated" data-wow-delay="300ms"
+                    data-wow-duration="1500ms"
+                    style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                    <!--Team One Single-->
+
+                </div>
+                <div class="col-xl-2 col-lg-4 col-md-4 col-6 wow fadeInUp animated" data-wow-delay="600ms"
+                    data-wow-duration="1500ms"
+                    style="visibility: visible; animation-duration: 1500ms; animation-delay: 600ms; animation-name: fadeInUp;">
+                    <!--Team One Single-->
+                    <div class="team-one__single">
+                        <div class="team-one__img" style="text-align:center">
+                            <img src="images/team/alli-rani.jpg" alt="">
+                            <h3 class="team-one__name" style="padding: 10px 0px 0px 0px; font-size:15px">DR.P.ALLI RANI
+                            </h3>
+                            <p class="team-one__title" style="padding: 0px 0px 10px 0px;">Director - SVPISTM</p>
+                            <div class="team-one__hover-content">
+                                <h3 class="team-one__name">DR.P.ALLI RANI</h3><p class="team-one__title">Director - SVPISTM</p>
+                                <p class="team-one__title" style="padding-top:30px">Director Sardar Vallabhbhai <br>
+                                    Patel International School of <br> Textiles and Management (SVPISTM), <bR>Coimbatore</p></div>
+                            <div class="team-one__bottom">
+                                <div class="team-one__btn-box"><a href="#" class="team-one__btn">Contact Me</a></div><!-- <div class="team-one__social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="clr-fb"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" class="clr-ins"><i class="fab fa-instagram"></i></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4"></div></div>
+        </div>
+    </section>
+
+    <section class="counters-one">
+        <div class="counters-one-bg"style="background-image: url('assets/images/backgrounds/counter-one-bg.jpg')">
+        </div>
+        <div class="container">
+            <ul class="counters-one__box list-unstyled">
+                <li class="counter-one__single">
+                    <div class="counter-one__icon">
+                        <span class="icon-group"></span>
+                    </div>
+                    <h3 class="odometer odometer-auto-theme" data-count="373">
+                        <div class="odometer-inside">
+                            <span class="odometer-digit">
+                                <span class="odometer-digit-spacer">8</span>
+                                <span class="odometer-digit-inner">
+                                    <span class="odometer-ribbon">
+                                        <span class="odometer-ribbon-inner">
+                                            <span class="odometer-value">2</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="odometer-digit">
+                                <span class="odometer-digit-spacer">8</span>
+                                <span class="odometer-digit-inner">
+                                    <span class="odometer-ribbon">
+                                        <span class="odometer-ribbon-inner">
+                                            <span class="odometer-value">8</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="odometer-digit">
+                                <span class="odometer-digit-spacer">8</span>
+                                <span class="odometer-digit-inner">
+                                    <span class="odometer-ribbon">
+                                        <span class="odometer-ribbon-inner">
+                                            <span class="odometer-value">0</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </h3>
+                    <p class="counter-one__text"> Students</p>
+                </li>
+                <li class="counter-one__single">
+                    <div class="counter-one__icon">
+                        <span class="icon-group"></span>
+                    </div>
+                    <h3 class="odometer odometer-auto-theme" data-count="183">
+                        <div class="odometer-inside">
+                            <span class="odometer-digit">
+                                <span class="odometer-digit-spacer">8</span>
+                                <span class="odometer-digit-inner">
+                                    <span class="odometer-ribbon">
+                                        <span class="odometer-ribbon-inner">
+                                            <span class="odometer-value">1</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="odometer-digit">
+                                <span class="odometer-digit-spacer">8</span>
+                                <span class="odometer-digit-inner">
+                                    <span class="odometer-ribbon">
+                                        <span class="odometer-ribbon-inner">
+                                            <span class="odometer-value">7</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="odometer-digit">
+                                <span class="odometer-digit-spacer">8</span>
+                                <span class="odometer-digit-inner">
+                                    <span class="odometer-ribbon">
+                                        <span class="odometer-ribbon-inner">
+                                            <span class="odometer-value">6</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </h3>
+                    <p class="counter-one__text">UG</p>
+                </li>
+                <li class="counter-one__single">
+                    <div class="counter-one__icon">
+                        <span class="icon-group"></span>
+                    </div>
+                    <h3 class="odometer odometer-auto-theme" data-count="190">
+                        <div class="odometer-inside">
+                            <span class="odometer-digit">
+                                <span class="odometer-digit-spacer">8</span>
+                                <span class="odometer-digit-inner">
+                                    <span class="odometer-ribbon">
+                                        <span class="odometer-ribbon-inner">
+                                            <span class="odometer-value">1</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="odometer-digit">
+                                <span class="odometer-digit-spacer">8</span>
+                                <span class="odometer-digit-inner">
+                                    <span class="odometer-ribbon">
+                                        <span class="odometer-ribbon-inner">
+                                            <span class="odometer-value">0</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="odometer-digit">
+                                <span class="odometer-digit-spacer">8</span>
+                                <span class="odometer-digit-inner">
+                                    <span class="odometer-ribbon">
+                                        <span class="odometer-ribbon-inner">
+                                            <span class="odometer-value">4</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </h3>
+                    <p class="counter-one__text">PG</p></li>
+                <li class="counter-one__single">
+                    <div class="counter-one__icon"><span class="icon-satisfaction"></span>
+                    </div>
+                    <h3 class="odometer odometer-auto-theme" data-count="100">
+                        <div class="odometer-inside"><span class="odometer-digit">
+                                <span class="odometer-digit-spacer">8</span>
+                                <span class="odometer-digit-inner"><span class="odometer-ribbon">
+                                        <span class="odometer-ribbon-inner"><span class="odometer-value"></span></span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="odometer-digit">
+                                <span class="odometer-digit-spacer">8</span>
+                                <span class="odometer-digit-inner">
+                                    <span class="odometer-ribbon">
+                                        <span class="odometer-ribbon-inner">
+                                            <span class="odometer-value">9</span></span>
+                                    </span>
+                                </span></span>
+                            <span class="odometer-digit">
+                                <span class="odometer-digit-spacer">8</span>
+                                <span class="odometer-digit-inner">
+                                    <span class="odometer-ribbon">
+                                        <span class="odometer-ribbon-inner">
+                                            <span class="odometer-value">5</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </h3>
+                    <p class="counter-one__text">LAST YEAR PLACEMENT (%)</p>
+                </li>
+                
+                
+                
+            </ul>
+        </div>
+    </section>
+    <section class="financial">
+        <div class="container">
+            <div class="section-title text-left">
+                <h2 class="section-title__title">THE COMPETITIVE EDGE AT SVPISTM   में प्रतिस्पर्धात्मक बढ़त</h2>
+                <span class="section-title__tagline">We bring the breathe of our experience</span>
+            </div>
+            <div class="row">
+                <div class="col-xl-5 col-lg-6">
+                    <div class="financial__left">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12">
+                                <div class="financial__left-img-box">
+                                    <div class="financial__left-img">
+                                        <img src="images/about.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-6">
+                    <div class="financial__right">
+                        <div class="financial__right-content">
+                            <ul class="list-unstyled financial__right__list">
+                                <li>Contemporary pedagogy for course delivery by adoption of student centric
+                                    teaching methods</li>
+                                <li>छात्र केंद्रित शिक्षण विधियों को अपनाकर पाठ्यक्रम वितरण के लिए समसामयिक शिक्षाशास्त्र</li>
+                                <li> Diverse faculty team with competent academicians, top management
+                                    executives of industries and entrepreneurs</li>
+                                <li>सक्षम शिक्षाविदों, उद्योगों और उद्यमियों के शीर्ष प्रबंधन अधिकारियों के साथ विविध संकाय सदस्य</li>
+                                <li> Faculty and Student Exchange Programmes</li>
+                                <li>संकाय और छात्र विनिमय कार्यक्रम</li>
+                                <li>Industry Interaction through industrial visits and practical training at
+                                    industries</li>
+                                <li>उद्योगों में औद्योगिक दौरों और व्यावहारिक प्रशिक्षण के माध्यम से उद्योग संपर्क</li>
+                                <li>Industry-need based curriculum for assured careers</li>
+                                <li>सुनिश्चित आजीविका के लिए उद्योग-आवश्यकता आधारित पाठ्यक्रम</li>
+                                <li>Live projects as part of the programme</li>
+                                <li>कार्यक्रम के भाग के रूप में लाइव प्रोजेक्ट</li>
+                                <li>MoU's With National and International university bodies and associations</li>
+                                <li>राष्ट्रीय और अंतर्राष्ट्रीय विश्वविद्यालय निकायों और संघों के साथ समझौता ज्ञापन</li>
+                                <li>Placement assistance and placement readiness programmes by experts
+                                <li>विशेषज्ञों द्वारा प्लेसमेंट सहायता और प्लेसमेंट तैयारी कार्यक्रम</li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brand-three">
+        <div class="container">
+            <div class="section-title text-left">
+                <h2 class="section-title__title">SOME OF OUR RECRUITERS</h2>
+                <span class="section-title__tagline"></span>
+            </div>
+            <div class="row">
+                <?php
+                        for($ik = 1; $ik < 14; $ik++){
+                            ?>
+                <div class="col-xl-3 col-lg-3">
+                    <div class="brand-one__img">
+                        <imgsrc="images/clients/<?php echo $ik;?>.png"
+                            alt="Sardar Vallabhbhai Patel International School and Textiles Managements">
+                    </div>
+                </div>
+                <?php
+                        }
+                    ?>
+
+            </div>
+        </div>
+    </section>
+   
+   <!--
+    <section class="financial">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-12">
+
+                </div>
+                <div class="col-xl-6 col-lg-12">
+                    <iframe width="100%" height="365" src="https://www.youtube.com/embed/ATIzXEdrpuA?controls=0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-xl-3 col-lg-12">
+                </div>
+            </div></div>
+    </section>
+    
+    <section class="financial">
+        <div class="container">
+            <div class="row"><div class="col-xl-3 col-lg-12">
+
+                </div>
+                <div class="col-xl-6 col-lg-12">
+                    <iframe width=100%" height="365" src="https://www.youtube.com/embed/6u7YVaCNaRM" title="International Yoga Day - 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="col-xl-3 col-lg-12">
+                </div>
+            </div>
+        </div></section>-->
+
+    <?php include 'footer.php';?>
+    
+
+
+    <script src="assets/vendors/jquery/jquery-3.5.1.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <!-- <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>  -->
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/swiper/swiper.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendors/twentytwenty/twentytwenty.js"></script>
+    <script src="assets/vendors/twentytwenty/jquery.event.move.js"></script>
+    <script src="assets/vendors/bxslider/js/jquery.bxslider.min.js"></script>
+
+    <!-- <script src="jquery.marquee.js"></script> -->
+    <!-- <script>
+    $(function() {
+        $('.marquee').marquee({
+            speed: 50,
+            gap: 0,
+            delayBeforeStart: 0,
+            direction: 'left',
+            duplicated: true,
+            pauseOnHover: true
+        });
+        $('.marquee1').marquee({
+            speed: 40,
+            gap: 0,
+            delayBeforeStart: 0,
+            direction: 'up',
+            duplicated: true,
+            pauseOnHover: true
+        });
+    });
+    </script> -->
+    <!-- template js -->
+    <script src="assets/js/svpi.js"></script>
+</body>
+
+</html>
